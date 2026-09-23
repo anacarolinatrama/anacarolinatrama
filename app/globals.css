@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream font-sans text-navy antialiased;
+  }
+
+  ::selection {
+    background: #12224c;
+    color: #f3e7c8;
+  }
+
+  a {
+    text-underline-offset: 3px;
+  }
+
+  /* compensa o header fixo ao navegar pelas âncoras */
+  section[id] {
+    scroll-margin-top: 92px;
+  }
+
+  :focus-visible {
+    outline: 3px solid #e5a81e;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ---------- animações (valores literais do protótipo) ---------- */
+
+@keyframes marq {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes ringshake {
+  0%, 100% { transform: rotate(-7deg) translate(0, 6px); }
+  25% { transform: rotate(-9.5deg) translate(-3px, 4px); }
+  50% { transform: rotate(-7deg) translate(2px, 7px); }
+  75% { transform: rotate(-4.5deg) translate(3px, 4px); }
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flashpop {
+  0%, 92% { opacity: .25; }
+  94% { opacity: 1; }
+  96% { opacity: .4; }
+  98% { opacity: 1; }
+  100% { opacity: .25; }
+}
+
+@keyframes eject {
+  0% { transform: translateY(-58%) rotate(-1deg); opacity: .25; }
+  60% { transform: translateY(0) rotate(1.5deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(1.5deg); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
