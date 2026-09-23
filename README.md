@@ -1,9 +1,9 @@
-# anacarolina.araujo
+# anacarolinatrama
 
 Portfólio de **Ana Carolina Trama** — UX/UI · Product Designer.
 Identidade "Bloco 90": blocos de cor chapada, contornos navy, sombras deslocadas e tipografia pesada. Bilíngue PT/EN.
 
-Feito com **Next.js (App Router) + React + Tailwind CSS**, a partir do handoff de design (`design_handoff_portfolio/index.html`).
+Feito com **Next.js (App Router) + React + Tailwind CSS**, a partir do protótipo de design `V2-Bloco-90-v2` (pasta `v2/` do handoff).
 
 ## Rodando localmente
 
@@ -30,20 +30,18 @@ Outros comandos: `npm run build` (build de produção), `npm run start` (serve o
 
 ### Fotos
 
-1. Coloque as imagens em `public/photos/` (ex.: `perfil.jpg`, `polaroid-1.jpg`…).
-2. Aponte os caminhos em `content/site.ts`:
-   ```ts
-   photos: {
-     profile: "/photos/perfil.jpg",           // retrato vertical 4:5
-     polaroid: ["/photos/polaroid-1.jpg", …], // quadradas, na ordem das legendas
-   }
-   ```
-Enquanto o valor for `null`, aparece o placeholder tracejado.
+Ficam em `public/photos/`:
+
+- `perfil.webp` — retrato vertical 4:5 da seção "Sobre mim"
+- `polaroid-1.webp` … `polaroid-4.webp` — fotos da câmera do hero, na ordem das legendas (Expressão, Detalhes, Conexão, Natureza)
+
+Para trocar, substitua o arquivo mantendo o nome (ou aponte outro caminho em `content/site.ts`).
+A descrição de cada foto para leitores de tela fica em `hero.camera.captions[].alt` (`content/pt.ts` / `content/en.ts`).
 
 ### Experiências
 
-Ficam em `exp.items` (`content/pt.ts` / `content/en.ts`), do mais recente para o mais antigo.
-Itens com `hidden: true` não aparecem no site (o primeiro, "a definir", está oculto como no protótipo).
+Ficam em `exp.items` (`content/pt.ts` / `content/en.ts`), do mais recente (01) para o mais antigo.
+Para esconder um item sem apagar o texto, adicione `hidden: true` nele.
 
 ### Formulário de contato
 
@@ -54,7 +52,7 @@ e defina a variável `NEXT_PUBLIC_FORM_ENDPOINT` com a URL dele (local: arquivo 
 ## Deploy na Vercel
 
 1. Suba este repositório no GitHub.
-2. Em [vercel.com/new](https://vercel.com/new), importe o repositório `anacarolina.araujo`.
+2. Em [vercel.com/new](https://vercel.com/new), importe o repositório `anacarolinatrama`.
 3. A Vercel detecta Next.js sozinha — é só clicar em **Deploy**.
 4. (Opcional) Adicione `NEXT_PUBLIC_FORM_ENDPOINT` nas variáveis de ambiente e um domínio próprio em *Settings → Domains*.
 
@@ -70,15 +68,15 @@ app/
   icon.svg            favicon "AT"
 components/
   Header.tsx          header fixo + troca PT/EN
-  hero/Hero.tsx       hero + câmera polaroid (hero/PolaroidCamera.tsx)
+  hero/Hero.tsx       hero + câmera polaroid (hero/PolaroidCamera.tsx) + bloco "o que eu faço"
   Ribbon.tsx          faixa vermelha rolando
   About.tsx           01. Sobre mim (+ CityScape.tsx)
-  Skills.tsx          02. Competências
-  Experience.tsx      03. Trajetória
+  Experience.tsx      02. Trajetória
+  Skills.tsx          03. Competências — mural (skills/: StickyNotes, Toolbox, Mascot)
   Contact.tsx         Contato (+ ContactForm.tsx)
   Footer.tsx
   LanguageProvider.tsx  idioma atual (lembrado no navegador)
-  ui/                 SectionKicker, Divider, Marquee, PhotoSlot
+  ui/                 SectionKicker, Marquee, PhotoSlot
 content/              textos PT/EN + links/fotos
-public/               telefone-90.png, photos/
+public/               telefone-90.png, photos/ (perfil + polaroid)
 ```

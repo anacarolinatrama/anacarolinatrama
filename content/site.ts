@@ -1,8 +1,8 @@
 /**
  * Links e imagens do site (não mudam com o idioma).
  *
- * Fotos: coloque os arquivos em /public/photos e aponte o caminho aqui,
- * ex.: "/photos/perfil.jpg". Enquanto estiver `null`, aparece o placeholder.
+ * Fotos: ficam em /public/photos. Para trocar, substitua o arquivo (mesmo nome)
+ * ou aponte outro caminho aqui. Com `null`, aparece o placeholder tracejado.
  */
 export const site = {
   email: "ana.trama@email.com",
@@ -10,8 +10,13 @@ export const site = {
 
   photos: {
     /** Retrato vertical da seção "Sobre mim" (proporção 4:5). */
-    profile: null as string | null,
-    /** Fotos da polaroid do hero (quadradas). A ordem segue as legendas em content/pt.ts. */
-    polaroid: [null, null, null, null] as (string | null)[],
+    profile: "/photos/perfil.webp" as string | null,
+    /** Fotos da polaroid do hero. A ordem segue as legendas em content/pt.ts. */
+    polaroid: [
+      "/photos/polaroid-1.webp",
+      "/photos/polaroid-2.webp",
+      "/photos/polaroid-3.webp",
+      "/photos/polaroid-4.webp",
+    ] as (string | null)[],
   },
 };

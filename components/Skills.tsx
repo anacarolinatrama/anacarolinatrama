@@ -1,143 +1,180 @@
 "use client";
 
-import { cn } from "@/lib/cn";
-import { useReveal } from "./hooks/useReveal";
 import { useLanguage } from "./LanguageProvider";
+import { Mascot } from "./skills/Mascot";
+import { StickyNotes } from "./skills/StickyNotes";
+import { Toolbox } from "./skills/Toolbox";
 import { SectionKicker } from "./ui/SectionKicker";
 
-/** Paleta de cada card, na ordem: paper · navy · gold · cream · red. */
-const THEMES = [
-  {
-    card: "bg-paper border-navy/50 hover:border-red hover:shadow-[0_0_0_2px_rgba(198,54,42,.18)]",
-    rule: "border-navy/[.22]",
-    num: "text-red",
-    tag: "text-navy/55",
-    title: "text-navy",
-    desc: "text-navy/85",
-    chip: "text-navy/80 bg-cream border-navy/25",
-  },
-  {
-    card: "bg-navy border-navy hover:border-gold hover:shadow-[0_0_0_2px_rgba(229,168,30,.3)]",
-    rule: "border-cream/30",
-    num: "text-gold",
-    tag: "text-cream/60",
-    title: "text-cream",
-    desc: "text-cream/[.86]",
-    chip: "text-cream bg-transparent border-cream/45",
-  },
-  {
-    card: "bg-gold border-navy/55 hover:border-navy hover:shadow-[0_0_0_2px_rgba(18,34,76,.2)]",
-    rule: "border-navy/35",
-    num: "text-red",
-    tag: "text-navy/65",
-    title: "text-navy",
-    desc: "text-navy/[.88]",
-    chip: "text-navy/[.82] bg-cream border-navy/30",
-  },
-  {
-    card: "bg-cream border-navy/50 hover:border-red hover:shadow-[0_0_0_2px_rgba(198,54,42,.18)]",
-    rule: "border-navy/[.28]",
-    num: "text-red",
-    tag: "text-navy/60",
-    title: "text-navy",
-    desc: "text-navy/[.86]",
-    chip: "text-navy/80 bg-paper border-navy/25",
-  },
-  {
-    card: "bg-red border-red hover:border-navy hover:shadow-[0_0_0_2px_rgba(18,34,76,.25)]",
-    rule: "border-cream/35",
-    num: "text-gold",
-    tag: "text-cream/[.72]",
-    title: "text-cream",
-    desc: "text-cream/90",
-    chip: "text-cream bg-transparent border-cream/50",
-  },
-];
+/** Bolinha "tachinha" usada nos enfeites do mural. */
+function Dot({ className }: { className: string }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`absolute h-[13px] w-[13px] rounded-full border-2 border-navy shadow-[2px_2px_0_rgba(18,34,76,.35)] ${className}`}
+    />
+  );
+}
 
+/** Fita adesiva translúcida. */
+const tape = "absolute h-5 w-[78px] border border-navy/35 bg-cream/[.85]";
+
+/** 03. Competências — mural com o repertório, a Toolbox e os post-its. */
 export function Skills() {
   const { t } = useLanguage();
   const s = t.skills;
-  const { ref, state } = useReveal<HTMLDivElement>();
 
   return (
     <section
       id="comp"
-      className="relative overflow-hidden px-[clamp(12px,3vw,36px)] pb-[clamp(26px,3.4vw,48px)] pt-[clamp(14px,2vw,26px)]"
+      className="relative overflow-hidden px-[clamp(12px,3vw,36px)] pb-[clamp(20px,3vw,40px)] pt-[clamp(30px,5vw,72px)]"
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-10 top-[22%] h-[200px] w-[200px] opacity-[.08]"
-        style={{
-          backgroundImage: "radial-gradient(#12224C 1.5px, transparent 1.6px)",
-          backgroundSize: "12px 12px",
-        }}
-      />
-
-      <SectionKicker number="02" label={s.kicker} className="mb-[clamp(20px,2.6vw,32px)]" />
-
-      <div className="relative mb-[clamp(24px,3vw,44px)] flex flex-col gap-3">
-        <span className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.18em] text-red">
-          <span aria-hidden="true" className="h-[7px] w-[7px] bg-red" />
-          {s.eyebrow}
+      {/* ---------- enfeites do mural ---------- */}
+      <div aria-hidden="true" className="pointer-events-none">
+        <div
+          className="absolute -left-10 top-[18%] h-[220px] w-[220px] opacity-[.16]"
+          style={{
+            backgroundImage: "radial-gradient(#12224C 1.6px, transparent 1.7px)",
+            backgroundSize: "12px 12px",
+          }}
+        />
+        <div className="absolute -right-[30px] bottom-[8%] h-[180px] w-[180px] rounded-full border-[3px] border-red opacity-25" />
+        <span className="absolute bottom-[16%] left-[2%] -rotate-[14deg] text-[34px] leading-none text-gold [text-shadow:2px_2px_0_#12224C]">
+          ★
         </span>
-        <h2 className="m-0 font-display text-[clamp(17px,1.6vw,25px)] uppercase leading-[1.2] text-navy">
-          {s.titleA}
-          <br className="hidden lg:inline" /> {s.titleB}
-        </h2>
+        <span className="absolute right-[4%] top-[44%] -rotate-[8deg] text-[26px] leading-none text-navy">☆</span>
+        <Dot className="left-[5%] top-[9%] bg-red" />
+        <Dot className="left-[66%] top-[4%] bg-gold" />
+        <Dot className="bottom-[9%] left-[30%] bg-navy" />
+        <Dot className="bottom-[24%] right-[8%] bg-red" />
+        <span className="absolute left-[1.5%] top-[32%] -rotate-[7deg] border-2 border-navy bg-gold px-[6px] py-[3px] font-mono text-[9px] tracking-[.14em] text-navy">
+          {s.fileTag}
+        </span>
+        <span className="absolute bottom-[5%] right-[12%] -rotate-[3deg] font-mono text-[10px] tracking-[.14em] text-red">
+          {s.boardEnd}
+        </span>
+        <span className="absolute left-[76%] top-[58%] h-[34px] w-[34px] rotate-[14deg] border-2 border-dashed border-navy opacity-30" />
       </div>
 
-      <div ref={ref} className="relative flex flex-wrap items-stretch gap-[clamp(14px,1.4vw,18px)]">
-        {s.cards.map((c, i) => {
-          const th = THEMES[i % THEMES.length];
-          return (
-            <article
-              key={c.num}
-              style={{ animationDelay: `${0.02 + i * 0.05}s` }}
-              className={cn(
-                "flex min-w-0 flex-[1_1_210px] flex-col gap-[10px] border-2 p-[clamp(16px,1.5vw,22px)] transition-[border-color,box-shadow] duration-[180ms] ease-in-out",
-                th.card,
-                state === "waiting" && "opacity-0",
-                state === "visible" && "animate-rise",
-              )}
-            >
-              <div className={cn("flex items-center justify-between gap-2 border-b pb-[10px]", th.rule)}>
-                <span className={cn("font-display text-[15px] tracking-[.06em]", th.num)}>{c.num}</span>
-                <span className={cn("font-mono text-[9px] uppercase tracking-[.16em]", th.tag)}>{c.tag}</span>
-              </div>
-              <h3
-                className={cn(
-                  "m-0 text-balance font-display text-[clamp(14px,1.05vw,16px)] uppercase leading-[1.18]",
-                  th.title,
-                )}
-              >
-                {c.title}
-              </h3>
-              <p className={cn("m-0 text-pretty text-[13.5px] leading-[1.6]", th.desc)}>{c.desc}</p>
-              <div className={cn("mt-auto flex flex-wrap gap-[5px] border-t border-dashed pt-[14px]", th.rule)}>
-                {c.chips.map((chip) => (
-                  <span
-                    key={chip}
-                    className={cn(
-                      "whitespace-nowrap border px-[7px] py-1 font-mono text-[10px] tracking-[.04em]",
-                      th.chip,
-                    )}
-                  >
-                    {chip}
-                  </span>
-                ))}
-              </div>
-            </article>
-          );
-        })}
-      </div>
-
-      <div className="relative mt-[clamp(18px,2.2vw,28px)] flex flex-wrap items-center justify-between gap-[14px]">
-        <a
-          href="#exp"
-          className="inline-flex items-center gap-2 border-2 border-navy bg-navy px-5 py-[13px] font-display text-[12px] uppercase tracking-[.04em] text-cream no-underline shadow-[5px_5px_0_#C6362A] transition-[transform,box-shadow] duration-[180ms] ease-in-out hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[2px_2px_0_#C6362A]"
+      <SectionKicker number="03" label={s.kicker} className="mb-[18px]">
+        <span
+          aria-hidden="true"
+          className="inline-block -rotate-[4deg] border-2 border-navy bg-red px-[6px] py-[3px] font-mono text-[8px] uppercase tracking-[.14em] text-cream"
         >
-          {s.cta}
-        </a>
+          {s.badge}
+        </span>
+        <span aria-hidden="true" className="font-mono text-[10px] uppercase tracking-[.18em] text-red">
+          {s.loading}
+        </span>
+      </SectionKicker>
+
+      <div className="mb-[14px] flex flex-wrap items-center gap-[10px]">
+        <span className="inline-block -rotate-[1.5deg] bg-gold px-2 py-1 font-mono text-[12px] text-navy">
+          {s.stickers[0]}
+        </span>
+        <span className="inline-block -rotate-2 border-2 border-navy bg-red px-[9px] py-[5px] font-display text-[11px] uppercase tracking-[.14em] text-cream">
+          {s.stickers[1]}
+        </span>
+      </div>
+
+      <div className="relative flex flex-wrap items-start gap-[clamp(14px,2.6vw,28px)]">
+        {/* ---------- quadro do repertório ---------- */}
+        <div className="relative min-w-0 flex-[1_1_520px]">
+          <div aria-hidden="true">
+            <span className={`${tape} left-[34px] top-[-11px] z-[3] -rotate-3`} />
+            <span className={`${tape} right-[44px] top-[-11px] z-[3] rotate-[2.5deg]`} />
+            <span className="absolute -left-[14px] top-[34%] z-[4] h-[11px] w-[11px] rounded-full border-2 border-navy bg-gold shadow-[2px_2px_0_rgba(18,34,76,.3)]" />
+            <span className="absolute -right-[14px] bottom-[20%] z-[4] h-[11px] w-[11px] rounded-full border-2 border-navy bg-navy" />
+            <span className="absolute -left-[18px] bottom-[-14px] z-[4] h-[18px] w-16 rotate-[4deg] border border-navy/35 bg-cream/[.85]" />
+          </div>
+
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] overflow-hidden rounded-[12px] border-[3px] border-navy bg-paper">
+            {s.groups.map((g) => (
+              <div key={g.t} className="border-b-2 border-r-2 border-navy p-5">
+                <h3 className="m-0 mb-3 font-display text-[14px] font-normal uppercase text-red">{g.t}</h3>
+                <ul className="m-0 flex list-none flex-col gap-[6px] p-0">
+                  {g.items.map((item) => (
+                    <li
+                      key={item}
+                      className="border-b-2 border-dotted border-navy/40 py-[7px] text-[14px] font-medium text-navy transition-colors hover:bg-gold"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div aria-hidden="true" className="mt-12 flex flex-wrap items-center gap-[7px]">
+            <span className="text-[15px] text-gold [text-shadow:1.5px_1.5px_0_#12224C]">★</span>
+            <span className="bg-[linear-gradient(transparent_55%,#E5A81E_55%)] font-mono text-[12px] text-navy">
+              {s.highlight}
+            </span>
+            <span className="relative inline-block max-w-[150px] rotate-[2.5deg] border-2 border-navy bg-cream px-[11px] pb-3 pt-[10px] font-mono text-[11px] leading-[1.35] text-navy shadow-[3px_3px_0_rgba(18,34,76,.3)]">
+              {s.figjamNote}
+              <span className="absolute left-1/2 top-[-8px] -ml-[6px] h-[11px] w-[11px] rounded-full border-2 border-navy bg-red" />
+            </span>
+          </div>
+        </div>
+
+        {/* ---------- coluna lateral: toolbox + memo + post-its ---------- */}
+        <div className="relative flex min-w-[210px] flex-[0_1_240px] flex-col gap-4">
+          <Toolbox
+            title={s.toolbox.title}
+            lines={s.toolbox.lines}
+            labels={{ minimize: s.toolbox.minimize, close: s.toolbox.close, open: s.toolbox.open }}
+          />
+
+          <div aria-hidden="true" className="flex flex-wrap items-center gap-2">
+            <span className="h-3 w-3 rounded-full border-2 border-navy bg-red shadow-[2px_2px_0_rgba(18,34,76,.3)]" />
+            <span className="h-3 w-3 rounded-full border-2 border-navy bg-gold shadow-[2px_2px_0_rgba(18,34,76,.3)]" />
+            <span className="h-0 flex-1 border-t-2 border-dashed border-navy/35" />
+            <span className="font-mono text-[9px] tracking-[.16em] text-red">{s.memo}</span>
+          </div>
+          <span className="font-mono text-[12px] text-navy">{s.ctrlz}</span>
+
+          <div className="relative min-h-[186px]">
+            <Mascot label={s.mascot} className="absolute left-[26px] top-[170px] z-[1] h-[84px] w-[78px]" />
+            <StickyNotes notes={s.notes} hint={s.notesHint} />
+            <span aria-hidden="true" className="text-[15px]">
+              ✥
+            </span>
+          </div>
+
+          <div aria-hidden="true" className="relative flex items-start gap-2">
+            <div className="relative flex h-[60px] w-[86px] -rotate-3 items-end border-2 border-navy bg-cream p-[5px] shadow-[3px_3px_0_rgba(18,34,76,.28)]">
+              <span className="absolute left-1/2 top-[-8px] -ml-[6px] h-[11px] w-[11px] rounded-full border-2 border-navy bg-red" />
+              <span className="font-mono text-[8px] tracking-[.12em] text-navy">{s.year}</span>
+            </div>
+            <div
+              className="h-[60px] w-[66px] rotate-[4deg] border-2 border-navy opacity-55"
+              style={{ background: "repeating-linear-gradient(0deg, #12224C 0 3px, #F3E7C8 3px 6px)" }}
+            />
+            <div className="flex flex-col gap-1 pt-[6px]">
+              <span className="font-mono text-[9px] tracking-[.1em] text-navy">{s.todo.title}</span>
+              {s.todo.items.map((it) => (
+                <span key={it} className="font-mono text-[9px] text-red">
+                  {it}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* enfeites soltos (só em telas largas, onde cabem) */}
+        <span
+          aria-hidden="true"
+          className="absolute left-[calc(100%-48px)] top-[277px] hidden rotate-6 border-2 border-navy bg-navy px-[7px] py-1 font-mono text-[9px] tracking-[.16em] text-cream lg:block"
+        >
+          {s.bazinga}
+        </span>
+        <span
+          aria-hidden="true"
+          className="absolute left-[30%] top-[279px] hidden rotate-12 text-[22px] leading-none text-red lg:block"
+        >
+          ✦
+        </span>
       </div>
     </section>
   );

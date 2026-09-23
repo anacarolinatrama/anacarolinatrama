@@ -6,10 +6,12 @@ type Props = {
   /** "light": texto navy + régua amarela com contorno. "dark": texto gold + régua vermelha (fundo navy). */
   tone?: "light" | "dark";
   className?: string;
+  /** Elementos extras depois da régua (ex.: selos). */
+  children?: React.ReactNode;
 };
 
 /** Abertura de seção: "NN. TÍTULO" + régua que preenche o resto da linha. */
-export function SectionKicker({ number, label, tone = "light", className }: Props) {
+export function SectionKicker({ number, label, tone = "light", className, children }: Props) {
   return (
     <div className={cn("flex items-baseline gap-[10px]", className)}>
       <span
@@ -27,6 +29,7 @@ export function SectionKicker({ number, label, tone = "light", className }: Prop
           tone === "light" ? "border-y-2 border-navy bg-gold" : "bg-red",
         )}
       />
+      {children}
     </div>
   );
 }

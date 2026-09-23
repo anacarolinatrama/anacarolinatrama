@@ -45,7 +45,7 @@ export function Header() {
       </div>
 
       <nav
-        aria-label="Seções"
+        aria-label={t.header.navLabel}
         className="no-scrollbar flex border-t-2 border-navy bg-cream max-md:overflow-x-auto md:flex-wrap"
       >
         {t.nav.map((it) => (
