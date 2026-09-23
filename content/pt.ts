@@ -7,7 +7,7 @@ export const pt: Copy = {
     description:
       "De humanos para humanos. Problemas não são impeditivos: são o que ainda não foi descoberto.",
   },
-  header: { home: "Ana Trama — voltar ao início", langLabel: "idioma /" },
+  header: { home: "Ana Trama — voltar ao início", langLabel: "idioma /", navLabel: "Seções" },
   nav: [
     { label: "Início", href: "#inicio" },
     { label: "Quem sou", href: "#sobre" },
@@ -40,10 +40,26 @@ export const pt: Copy = {
       model: "sx-70 ✦ light",
       photoPlaceholder: "Foto",
       captions: [
-        { title: "Expressão", text: "Quanto mais me expresso, mais me conecto." },
-        { title: "Detalhes", text: "Sempre que posso, olho para o céu." },
-        { title: "Conexão", text: "Novos sons também são novas formas de enxergar o mundo." },
-        { title: "Natureza", text: "Sair da rotina também muda minha perspectiva." },
+        {
+          title: "Expressão",
+          text: "Quanto mais me expresso, mais me conecto.",
+          alt: "Ana sorrindo, de óculos, blusa listrada e colares coloridos",
+        },
+        {
+          title: "Detalhes",
+          text: "Sempre que posso, olho para o céu.",
+          alt: "Ana de óculos escuros, fotografada de baixo com o céu azul e nuvens ao fundo",
+        },
+        {
+          title: "Conexão",
+          text: "Novos sons também são novas formas de enxergar o mundo.",
+          alt: "Ana de fone de ouvido, sorrindo para a câmera",
+        },
+        {
+          title: "Natureza",
+          text: "Sair da rotina também muda minha perspectiva.",
+          alt: "Ana ao ar livre, com montanhas e o céu ao fundo",
+        },
       ],
     },
     links: [
@@ -52,6 +68,12 @@ export const pt: Copy = {
       { n: "03", label: "Ver cases", href: "#exp", arrow: true },
       { n: "04", label: "Contato", href: "#contato", arrow: true },
     ],
+    whatIDo: {
+      eyebrow: "o que eu faço /",
+      title: "Todo problema é único e precisa de atenção individual.",
+      text: "Cada situação exige uma abordagem diferente, desde ajustes em interfaces existentes até a criação de novos produtos. Quase sempre, a resposta não está na superfície.",
+      cta: "Ver cases →",
+    },
   },
 
   ribbon:
@@ -75,59 +97,12 @@ export const pt: Copy = {
     note: "Boas experiências precisam de fundação. É acompanhando o processo de ponta a ponta que eu construo soluções que fazem sentido além da tela.",
   },
 
-  skills: {
-    kicker: "Competências",
-    eyebrow: "/ como eu atuo /",
-    titleA:
-      "Da pesquisa à entrega, transformo demandas em experiências mais claras, estratégicas e",
-    titleB: "viáveis.",
-    cards: [
-      {
-        num: "01",
-        tag: "discovery",
-        title: "Research & Discovery",
-        desc: "Pesquisa qualitativa e quantitativa, benchmarking, pesquisa de mercado e análise de dados.",
-        chips: ["quali", "quanti", "benchmark", "dados"],
-      },
-      {
-        num: "02",
-        tag: "systems",
-        title: "Experience & Service Strategy",
-        desc: "Jornadas, fluxos e processos de ponta a ponta, identificação de gaps, fricções e oportunidades dentro e fora do ambiente digital.",
-        chips: ["jornadas", "blueprint", "fluxos", "gaps"],
-      },
-      {
-        num: "03",
-        tag: "pessoas",
-        title: "Facilitation & Product Alignment",
-        desc: "Dinâmicas, workshops, conversas individuais, alinhamento com stakeholders, entendimento de demandas e estruturação de propostas de atuação.",
-        chips: ["workshops", "facilitação", "stakeholders", "escopo"],
-      },
-      {
-        num: "04",
-        tag: "craft",
-        title: "Interaction Design & Prototyping",
-        desc: "Fluxos, wireframes, protótipos e construção de soluções consistentes e viáveis para desenvolvimento.",
-        chips: ["wireframes", "protótipos", "design system", "handoff"],
-      },
-      {
-        num: "05",
-        tag: "evidência",
-        title: "Validation, Accessibility & Analytics",
-        desc: "Validação, acessibilidade, métricas, analytics e tagueamento para apoiar decisões e evolução contínua da experiência.",
-        chips: ["usabilidade", "WCAG", "métricas", "analytics"],
-      },
-    ],
-    cta: "Acesse meus projetos →",
-  },
-
   exp: {
     kicker: "Trajetória",
     title: "Minhas experiências",
     items: [
       {
-        // ⚠ conteúdo "a definir" — oculto, como no protótipo (index.html mostra a partir do 2º item)
-        hidden: true,
+        // ⚠ conteúdo "a definir" — para esconder um item sem apagar, use `hidden: true`
         role: "Cargo a definir",
         co: "Empresa a definir",
         period: "2023 — hoje",
@@ -176,6 +151,68 @@ export const pt: Copy = {
         learn: "Todo produto merece uma boa usabilidade e todo cliente uma boa experiência.",
       },
     ],
+  },
+
+  skills: {
+    kicker: "Competências",
+    badge: "Mixtape",
+    loading: "Loading...",
+    stickers: ["← pergunte primeiro.", "Error! bonito não basta."],
+    groups: [
+      {
+        t: "Pesquisa & dados",
+        items: [
+          "UX Research",
+          "Pesquisa quantitativa e qualitativa",
+          "Análise heurística",
+          "Benchmarking",
+          "Teste de usabilidade",
+          "Métricas & hipóteses",
+        ],
+      },
+      {
+        t: "Estratégia",
+        items: ["UX Strategy", "Problem framing", "Análise de jornada", "Regras de negócio", "Priorização"],
+      },
+      {
+        t: "Design de produto",
+        items: [
+          "Product Design",
+          "Interaction Design",
+          "Arquitetura da informação",
+          "User Flows",
+          "UI Design",
+          "Prototipação",
+        ],
+      },
+      {
+        t: "Sistemas & qualidade",
+        items: ["Design Systems", "Componentização", "Acessibilidade", "Usabilidade", "Documentação", "Handoff"],
+      },
+    ],
+    highlight: "usuário ↔ negócio. design faz a ponte.",
+    figjamNote: "isso fazia sentido no FigJam.",
+    toolbox: {
+      title: "Toolbox.exe",
+      lines: ["Figma · FigJam", "AI Tools · Prototyping"],
+      minimize: "Minimizar Toolbox",
+      close: "Fechar Toolbox",
+      open: "Abrir Toolbox",
+    },
+    memo: "memo.",
+    ctrlz: "ctrl + z é autocuidado.",
+    notes: [
+      "REGRA #01 — Nunca presuma.",
+      "REGRA #02 — Pergunte “por quê?”. Depois pergunte de novo.",
+      "testar > adivinhar",
+    ],
+    notesHint: "Post-it arrastável. Use as setas do teclado para mover.",
+    mascot: "Mascote acenando",
+    year: "1998 ★",
+    todo: { title: "to-do:", items: ["✓ perguntar", "✓ testar"] },
+    fileTag: "versão_final_agora_vai_03.fig",
+    boardEnd: "</board>",
+    bazinga: "Bazinga!",
   },
 
   contact: {

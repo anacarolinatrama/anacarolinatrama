@@ -7,7 +7,6 @@ import { Hero } from "@/components/hero/Hero";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { Ribbon } from "@/components/Ribbon";
 import { Skills } from "@/components/Skills";
-import { Divider } from "@/components/ui/Divider";
 
 export default function Home() {
   return (
@@ -18,9 +17,8 @@ export default function Home() {
           <Hero />
           <Ribbon />
           <About />
-          <Divider />
-          <Skills />
           <Experience />
+          <Skills />
           <Contact />
         </main>
         <Footer />

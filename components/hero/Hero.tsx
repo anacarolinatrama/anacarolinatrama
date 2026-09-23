@@ -116,6 +116,36 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* ---------- "o que eu faço" ---------- */}
+      <div className="relative mt-[14px] overflow-hidden border-[3px] border-navy bg-cream p-[clamp(20px,3.2vw,44px)] shadow-[12px_12px_0_#C6362A] max-sm:shadow-[8px_8px_0_#C6362A]">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(45deg, rgba(18,34,76,.05) 0 12px, transparent 12px 24px)",
+          }}
+        />
+        <div className="relative flex min-w-0 flex-col gap-4">
+          <span className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.18em] text-red">
+            <span aria-hidden="true" className="h-[9px] w-[9px] animate-blink bg-red" />
+            {h.whatIDo.eyebrow}
+          </span>
+          <h2 className="m-0 max-w-[30ch] text-balance font-display text-[clamp(26px,3.6vw,46px)] uppercase leading-[.98] text-navy">
+            {h.whatIDo.title}
+          </h2>
+          <p className="m-0 max-w-[62ch] text-balance text-[15px] leading-[1.65] text-navy">{h.whatIDo.text}</p>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="#exp"
+              className="border-2 border-navy bg-navy px-5 py-[13px] font-display text-[12px] uppercase text-cream no-underline shadow-[5px_5px_0_#C6362A] transition-[transform,box-shadow] duration-[180ms] ease-in-out hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[2px_2px_0_#C6362A]"
+            >
+              {h.whatIDo.cta}
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

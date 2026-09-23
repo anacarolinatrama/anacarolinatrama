@@ -109,9 +109,10 @@ export function PolaroidCamera() {
             >
               <PhotoSlot
                 src={site.photos.polaroid[i] ?? null}
-                alt={cam.captions[i]?.text ?? ""}
+                alt={cam.captions[i]?.alt ?? ""}
                 placeholder={`${cam.photoPlaceholder} ${i + 1}`}
                 sizes="280px"
+                priority={i === 0}
                 className="rounded-[3px]"
               />
             </div>

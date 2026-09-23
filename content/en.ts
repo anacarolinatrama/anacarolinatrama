@@ -9,7 +9,7 @@ export const en: Copy = {
     description:
       "From humans to humans. Problems aren't blockers: they're what hasn't been discovered yet.",
   },
-  header: { home: "Ana Trama — back to top", langLabel: "language /" },
+  header: { home: "Ana Trama — back to top", langLabel: "language /", navLabel: "Sections" },
   nav: [
     { label: "Home", href: "#inicio" },
     { label: "About", href: "#sobre" },
@@ -42,10 +42,26 @@ export const en: Copy = {
       model: "sx-70 ✦ light",
       photoPlaceholder: "Photo",
       captions: [
-        { title: "Expression", text: "The more I express myself, the more I connect." },
-        { title: "Details", text: "Whenever I can, I look up at the sky." },
-        { title: "Connection", text: "New sounds are also new ways of seeing the world." },
-        { title: "Nature", text: "Stepping out of routine changes my perspective too." },
+        {
+          title: "Expression",
+          text: "The more I express myself, the more I connect.",
+          alt: "Ana smiling, wearing glasses, a striped top and colorful necklaces",
+        },
+        {
+          title: "Details",
+          text: "Whenever I can, I look up at the sky.",
+          alt: "Ana in sunglasses, photographed from below against a blue sky with clouds",
+        },
+        {
+          title: "Connection",
+          text: "New sounds are also new ways of seeing the world.",
+          alt: "Ana wearing headphones, smiling at the camera",
+        },
+        {
+          title: "Nature",
+          text: "Stepping out of routine changes my perspective too.",
+          alt: "Ana outdoors, with mountains and sky in the background",
+        },
       ],
     },
     links: [
@@ -54,6 +70,12 @@ export const en: Copy = {
       { n: "03", label: "See cases", href: "#exp", arrow: true },
       { n: "04", label: "Contact", href: "#contato", arrow: true },
     ],
+    whatIDo: {
+      eyebrow: "what I do /",
+      title: "Every problem is unique and deserves individual attention.",
+      text: "Each situation calls for a different approach, from adjusting existing interfaces to creating new products. The answer is almost never on the surface.",
+      cta: "See cases →",
+    },
   },
 
   ribbon:
@@ -77,58 +99,11 @@ export const en: Copy = {
     note: "Good experiences need a foundation. By following the process end to end, I build solutions that make sense beyond the screen.",
   },
 
-  skills: {
-    kicker: "Skills",
-    eyebrow: "/ how I work /",
-    titleA:
-      "From research to delivery, I turn demands into clearer, more strategic and",
-    titleB: "feasible experiences.",
-    cards: [
-      {
-        num: "01",
-        tag: "discovery",
-        title: "Research & Discovery",
-        desc: "Qualitative and quantitative research, benchmarking, market research and data analysis.",
-        chips: ["qual", "quant", "benchmark", "data"],
-      },
-      {
-        num: "02",
-        tag: "systems",
-        title: "Experience & Service Strategy",
-        desc: "End-to-end journeys, flows and processes, spotting gaps, friction and opportunities inside and outside the digital space.",
-        chips: ["journeys", "blueprint", "flows", "gaps"],
-      },
-      {
-        num: "03",
-        tag: "people",
-        title: "Facilitation & Product Alignment",
-        desc: "Dynamics, workshops, one-on-one conversations, stakeholder alignment, understanding demands and shaping proposals.",
-        chips: ["workshops", "facilitation", "stakeholders", "scope"],
-      },
-      {
-        num: "04",
-        tag: "craft",
-        title: "Interaction Design & Prototyping",
-        desc: "Flows, wireframes, prototypes and consistent solutions that are feasible to build.",
-        chips: ["wireframes", "prototypes", "design system", "handoff"],
-      },
-      {
-        num: "05",
-        tag: "evidence",
-        title: "Validation, Accessibility & Analytics",
-        desc: "Validation, accessibility, metrics, analytics and tagging to support decisions and the continuous evolution of the experience.",
-        chips: ["usability", "WCAG", "metrics", "analytics"],
-      },
-    ],
-    cta: "See my projects →",
-  },
-
   exp: {
     kicker: "Experience",
     title: "Where the work happened",
     items: [
       {
-        hidden: true,
         role: "Role TBD",
         co: "Company TBD",
         period: "2023 — now",
@@ -177,6 +152,68 @@ export const en: Copy = {
         learn: "Every product deserves good usability and every customer a good experience.",
       },
     ],
+  },
+
+  skills: {
+    kicker: "Skills",
+    badge: "Mixtape",
+    loading: "Loading...",
+    stickers: ["← ask first.", "Error! pretty isn't enough."],
+    groups: [
+      {
+        t: "Research & data",
+        items: [
+          "UX Research",
+          "Quantitative & qualitative research",
+          "Heuristic analysis",
+          "Benchmarking",
+          "Usability testing",
+          "Metrics & hypotheses",
+        ],
+      },
+      {
+        t: "Strategy",
+        items: ["UX Strategy", "Problem framing", "Journey analysis", "Business rules", "Prioritization"],
+      },
+      {
+        t: "Product design",
+        items: [
+          "Product Design",
+          "Interaction Design",
+          "Information Architecture",
+          "User Flows",
+          "UI Design",
+          "Prototyping",
+        ],
+      },
+      {
+        t: "Systems & quality",
+        items: ["Design Systems", "Componentization", "Accessibility", "Usability", "Documentation", "Handoff"],
+      },
+    ],
+    highlight: "user ↔ business. design builds the bridge.",
+    figjamNote: "this made sense in FigJam.",
+    toolbox: {
+      title: "Toolbox.exe",
+      lines: ["Figma · FigJam", "AI Tools · Prototyping"],
+      minimize: "Minimize Toolbox",
+      close: "Close Toolbox",
+      open: "Open Toolbox",
+    },
+    memo: "memo.",
+    ctrlz: "ctrl + z is self-care.",
+    notes: [
+      "RULE #01 — Never assume.",
+      "RULE #02 — Ask “why?”. Then ask again.",
+      "testing > guessing",
+    ],
+    notesHint: "Draggable sticky note. Use the arrow keys to move it.",
+    mascot: "Waving mascot",
+    year: "1998 ★",
+    todo: { title: "to-do:", items: ["✓ ask", "✓ test"] },
+    fileTag: "final_version_for_real_03.fig",
+    boardEnd: "</board>",
+    bazinga: "Bazinga!",
   },
 
   contact: {

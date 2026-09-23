@@ -13,18 +13,12 @@ export type Experience = {
   hidden?: boolean;
 };
 
-export type SkillCard = {
-  num: string;
-  tag: string;
-  title: string;
-  desc: string;
-  chips: string[];
-};
+export type SkillGroup = { t: string; items: string[] };
 
 export type Copy = {
   htmlLang: string;
   meta: { title: string; description: string };
-  header: { home: string; langLabel: string };
+  header: { home: string; langLabel: string; navLabel: string };
   nav: NavItem[];
   hero: {
     hello: string;
@@ -44,9 +38,12 @@ export type Copy = {
       brand: string;
       model: string;
       photoPlaceholder: string;
-      captions: { title: string; text: string }[];
+      /** title/text = legenda da polaroid; alt = descrição da foto para leitores de tela */
+      captions: { title: string; text: string; alt: string }[];
     };
     links: { n: string; label: string; href: string; arrow?: boolean }[];
+    /** Bloco "o que eu faço", logo abaixo do hero */
+    whatIDo: { eyebrow: string; title: string; text: string; cta: string };
   };
   ribbon: string;
   about: {
@@ -61,18 +58,30 @@ export type Copy = {
     fileTag: string;
     note: string;
   };
-  skills: {
-    kicker: string;
-    eyebrow: string;
-    titleA: string;
-    titleB: string;
-    cards: SkillCard[];
-    cta: string;
-  };
   exp: {
     kicker: string;
     title: string;
     items: Experience[];
+  };
+  skills: {
+    kicker: string;
+    badge: string;
+    loading: string;
+    stickers: [string, string];
+    groups: SkillGroup[];
+    highlight: string;
+    figjamNote: string;
+    toolbox: { title: string; lines: string[]; minimize: string; close: string; open: string };
+    memo: string;
+    ctrlz: string;
+    notes: string[];
+    notesHint: string;
+    mascot: string;
+    year: string;
+    todo: { title: string; items: string[] };
+    fileTag: string;
+    boardEnd: string;
+    bazinga: string;
   };
   contact: {
     kicker: string;
