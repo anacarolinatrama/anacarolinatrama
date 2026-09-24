@@ -6,6 +6,8 @@
  */
 export const site = {
   email: "ana.trama@email.com",
+  /** WhatsApp que recebe o formulário de contato (só dígitos, com DDI + DDD). */
+  whatsapp: "5511989085697",
   linkedin: "https://www.linkedin.com/",
 
   photos: {

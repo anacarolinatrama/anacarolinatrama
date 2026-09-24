@@ -68,6 +68,21 @@ export function Skills() {
         </span>
       </SectionKicker>
 
+      {/* aviso: os post-its são arrastáveis */}
+      <p className="relative m-0 mb-[18px] flex max-w-[640px] items-start gap-[10px] font-mono text-[12px] leading-[1.5] text-navy">
+        <span
+          aria-hidden="true"
+          className="grid h-7 w-7 flex-none -rotate-6 place-items-center border-2 border-navy bg-gold text-[15px] leading-none text-navy shadow-[2px_2px_0_#12224C]"
+        >
+          ✥
+        </span>
+        <span className="pt-[4px]">
+          <strong className="font-semibold text-red">{s.dragHint.lead}</strong>{" "}
+          <span className="[@media(pointer:coarse)]:hidden">{s.dragHint.mouse}</span>
+          <span className="hidden [@media(pointer:coarse)]:inline">{s.dragHint.touch}</span>
+        </span>
+      </p>
+
       <div className="mb-[14px] flex flex-wrap items-center gap-[10px]">
         <span className="inline-block -rotate-[1.5deg] bg-gold px-2 py-1 font-mono text-[12px] text-navy">
           {s.stickers[0]}

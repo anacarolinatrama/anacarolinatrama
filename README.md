@@ -24,7 +24,7 @@ Outros comandos: `npm run build` (build de produção), `npm run start` (serve o
 | --- | --- |
 | Todos os textos em português | `content/pt.ts` |
 | Todos os textos em inglês | `content/en.ts` |
-| E-mail, LinkedIn e fotos | `content/site.ts` |
+| WhatsApp, e-mail, LinkedIn e fotos | `content/site.ts` |
 | Cores, fontes, sombras, animações | `tailwind.config.ts` e `app/globals.css` |
 | Título/descrição da aba e redes sociais | `app/layout.tsx` (usa `meta` de `content/pt.ts`) |
 
@@ -45,16 +45,16 @@ Para esconder um item sem apagar o texto, adicione `hidden: true` nele.
 
 ### Formulário de contato
 
-Sem configuração, o botão "Enviar" abre o app de e-mail da pessoa com a mensagem pronta para `site.email`.
-Para receber direto (sem depender do app de e-mail), crie um formulário grátis no [Formspree](https://formspree.io)
-e defina a variável `NEXT_PUBLIC_FORM_ENDPOINT` com a URL dele (local: arquivo `.env.local`; Vercel: *Settings → Environment Variables*).
+Ao clicar em "Enviar mensagem", o site monta um texto com os campos preenchidos (nome, e-mail, celular formatado e contexto)
+e abre o WhatsApp da Ana com a mensagem pronta — a pessoa só toca em enviar.
+O número fica em `site.whatsapp` (`content/site.ts`, só dígitos com DDI + DDD) e os rótulos da mensagem em `contact.whatsapp` (`content/pt.ts` / `content/en.ts`).
 
 ## Deploy na Vercel
 
 1. Suba este repositório no GitHub.
 2. Em [vercel.com/new](https://vercel.com/new), importe o repositório `anacarolinatrama`.
 3. A Vercel detecta Next.js sozinha — é só clicar em **Deploy**.
-4. (Opcional) Adicione `NEXT_PUBLIC_FORM_ENDPOINT` nas variáveis de ambiente e um domínio próprio em *Settings → Domains*.
+4. (Opcional) Configure um domínio próprio em *Settings → Domains*.
 
 Cada `git push` na branch `main` publica uma nova versão automaticamente.
 

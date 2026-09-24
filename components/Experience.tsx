@@ -23,32 +23,32 @@ export function Experience() {
             className="grid grid-cols-1 border-[3px] border-gold bg-cream md:grid-cols-3"
           >
             <div className="flex flex-col gap-[6px] border-navy bg-gold p-5 max-md:border-b-[3px] md:border-r-[3px]">
-              <span className="font-display text-[34px] leading-none text-navy">
-                {String(i + 1).padStart(2, "0")}
-              </span>
+              <span className="font-display text-[34px] leading-none text-navy">{String(i + 1).padStart(2, "0")}</span>
               <span className="font-mono text-[11px] uppercase tracking-[.12em] text-navy">{it.period}</span>
-              <h3 className="m-0 font-display text-[17px] font-normal uppercase leading-[1.15] text-navy">
-                {it.role}
-              </h3>
+              <h3 className="m-0 font-display text-[17px] font-normal uppercase leading-[1.15] text-navy">{it.role}</h3>
               <span className="text-[14px] font-medium text-navy">{it.co}</span>
             </div>
 
             <div className="flex min-w-0 flex-col gap-3 p-5 md:col-span-2">
               <p className="m-0 text-[15px] leading-[1.65] text-navy">{it.desc}</p>
-              <ul className="m-0 flex list-none flex-wrap gap-[6px] p-0">
-                {it.tags.map((tag, j) => (
-                  <li
-                    key={`${tag}-${j}`}
-                    className="border-2 border-navy px-[10px] py-[5px] font-mono text-[10px] uppercase text-navy"
-                  >
-                    {tag}
-                  </li>
-                ))}
-              </ul>
-              <p className="m-0 flex items-center gap-[9px] bg-red px-3 py-[10px]">
-                <span aria-hidden="true" className="h-3 w-3 flex-none bg-cream" />
-                <span className="font-display text-[13px] uppercase leading-[1.3] text-white">{it.learn}</span>
-              </p>
+              {it.tags.length > 0 && (
+                <ul className="m-0 flex list-none flex-wrap gap-[6px] p-0">
+                  {it.tags.map((tag, j) => (
+                    <li
+                      key={`${tag}-${j}`}
+                      className="border-2 border-navy px-[10px] py-[5px] font-mono text-[10px] uppercase text-navy"
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {it.learn && (
+                <p className="m-0 flex items-center gap-[9px] bg-red px-3 py-[10px]">
+                  <span aria-hidden="true" className="h-3 w-3 flex-none bg-cream" />
+                  <span className="font-display text-[13px] uppercase leading-[1.3] text-white">{it.learn}</span>
+                </p>
+              )}
             </div>
           </article>
         ))}
