@@ -7,8 +7,10 @@ export type Experience = {
   co: string;
   period: string;
   desc: string;
+  /** Pode ficar vazio: a lista de tags some. */
   tags: string[];
-  learn: string;
+  /** Opcional: sem texto, a faixa vermelha de aprendizado não aparece. */
+  learn?: string;
   /** Oculta o item no site sem apagar o conteúdo. */
   hidden?: boolean;
 };
@@ -76,6 +78,8 @@ export type Copy = {
     ctrlz: string;
     notes: string[];
     notesHint: string;
+    /** Aviso abaixo do título de que os post-its são arrastáveis (texto muda entre mouse e toque). */
+    dragHint: { lead: string; mouse: string; touch: string };
     mascot: string;
     year: string;
     todo: { title: string; items: string[] };
@@ -99,12 +103,12 @@ export type Copy = {
       context: string;
       placeholder: string;
       submit: string;
-      sending: string;
-      error: string;
-      mailSubject: string;
+      /** Aviso curto abaixo do botão (o envio abre o WhatsApp). */
+      note: string;
     };
-    sent: { title: string; text: string };
-    sentMail: { title: string; text: string };
+    /** Rótulos da mensagem montada para o WhatsApp. */
+    whatsapp: { greeting: string; name: string; email: string; phone: string; context: string };
+    sent: { title: string; text: string; retry: string; again: string };
     phoneAlt: string;
     phoneLabel: string;
   };

@@ -17,6 +17,8 @@ export function Contact() {
   const firstFieldRef = useRef<HTMLInputElement | null>(null);
   const [highlight, setHighlight] = useState(false);
   const [ringing, setRinging] = useState(false);
+  // depois do envio o cartão de confirmação é mais baixo: o telefone desce para não cobrir o texto
+  const [sent, setSent] = useState(false);
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => () => timers.current.forEach(clearTimeout), []);
@@ -99,14 +101,15 @@ export function Contact() {
             onMouseLeave={() => setRinging(false)}
             className="relative flex min-w-[min(290px,100%)] flex-[1_1_380px] flex-col justify-center self-stretch pb-[clamp(40px,7vw,96px)]"
           >
-            <ContactForm firstFieldRef={firstFieldRef} highlight={highlight} />
+            <ContactForm firstFieldRef={firstFieldRef} highlight={highlight} onSentChange={setSent} />
 
             <button
               type="button"
               onClick={ring}
               aria-label={c.phoneLabel}
               className={cn(
-                "relative z-[4] -mr-[clamp(6px,2vw,26px)] md:-mt-[clamp(48px,7vw,86px)] -mt-3 w-[clamp(220px,28vw,306px)] -rotate-[7deg] cursor-pointer self-end border-0 bg-transparent p-0",
+                "relative z-[4] -mr-[clamp(6px,2vw,26px)] w-[clamp(220px,28vw,306px)] -rotate-[7deg] cursor-pointer self-end border-0 bg-transparent p-0",
+                sent ? "mt-4" : "-mt-3 md:-mt-[clamp(48px,7vw,86px)]",
                 ringing && "animate-ring",
               )}
             >
