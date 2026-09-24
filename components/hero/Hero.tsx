@@ -45,6 +45,11 @@ export function Hero() {
               </span>
             </div>
 
+            {/* cargo em destaque */}
+            <p className="m-0 inline-block self-start border-2 border-navy bg-gold px-[14px] py-2 font-display text-[clamp(15px,2vw,24px)] uppercase leading-none tracking-[.01em] text-navy shadow-[5px_5px_0_#C6362A]">
+              {h.role}
+            </p>
+
             <p className="m-0 max-w-[46ch] text-pretty text-[clamp(14px,1.5vw,18px)] leading-[1.5] text-mist">
               {h.intro}
             </p>
@@ -82,15 +87,18 @@ export function Hero() {
                 ))}
               </span>
               <span className="mt-[10px] font-mono text-[10px] uppercase tracking-[.2em] text-gold">
-                {h.solveLabel}
+                {h.clientsLabel}
               </span>
-              <span className="text-[13px] leading-[1.5] text-mist">
-                {h.solve.map((line, i) => (
-                  <span key={i} className="block">
-                    {line}
-                  </span>
+              <ul className="m-0 flex list-none flex-wrap gap-[6px] p-0">
+                {h.clients.map((c) => (
+                  <li
+                    key={c}
+                    className="border border-cream/35 px-2 py-1 font-mono text-[10px] uppercase tracking-[.08em] text-cream"
+                  >
+                    {c}
+                  </li>
                 ))}
-              </span>
+              </ul>
             </div>
           </div>
 
@@ -113,36 +121,6 @@ export function Hero() {
                 </a>
               ))}
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ---------- "o que eu faço" ---------- */}
-      <div className="relative mt-[14px] overflow-hidden border-[3px] border-navy bg-cream p-[clamp(20px,3.2vw,44px)] shadow-[12px_12px_0_#C6362A] max-sm:shadow-[8px_8px_0_#C6362A]">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(45deg, rgba(18,34,76,.05) 0 12px, transparent 12px 24px)",
-          }}
-        />
-        <div className="relative flex min-w-0 flex-col gap-4">
-          <span className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.18em] text-red">
-            <span aria-hidden="true" className="h-[9px] w-[9px] animate-blink bg-red" />
-            {h.whatIDo.eyebrow}
-          </span>
-          <h2 className="m-0 max-w-[30ch] text-balance font-display text-[clamp(26px,3.6vw,46px)] uppercase leading-[.98] text-navy">
-            {h.whatIDo.title}
-          </h2>
-          <p className="m-0 max-w-[62ch] text-balance text-[15px] leading-[1.65] text-navy">{h.whatIDo.text}</p>
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href="#exp"
-              className="border-2 border-navy bg-navy px-5 py-[13px] font-display text-[12px] uppercase text-cream no-underline shadow-[5px_5px_0_#C6362A] transition-[transform,box-shadow] duration-[180ms] ease-in-out hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[2px_2px_0_#C6362A]"
-            >
-              {h.whatIDo.cta}
-            </a>
           </div>
         </div>
       </div>

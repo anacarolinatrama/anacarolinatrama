@@ -5,15 +5,16 @@ import type { Copy } from "./types";
 export const en: Copy = {
   htmlLang: "en",
   meta: {
-    title: "Ana Carolina Trama — UX/UI · Product Designer",
+    title: "Ana Carolina Trama — UX/UI & Product Designer",
     description:
-      "From humans to humans. Problems aren't blockers: they're what hasn't been discovered yet.",
+      "Ana Carolina Trama, UX/UI & Product Designer. 8 years designing digital products for banking, media and retail — currently at Banco do Brasil.",
   },
   header: { home: "Ana Trama — back to top", langLabel: "language /", navLabel: "Sections" },
   nav: [
     { label: "Home", href: "#inicio" },
     { label: "About", href: "#sobre" },
     { label: "Experience", href: "#exp" },
+    { label: "AI", href: "#ia" },
     { label: "Skills", href: "#comp" },
     { label: "Contact", href: "#contato" },
   ],
@@ -22,19 +23,17 @@ export const en: Copy = {
     hello: "Hello, stranger.",
     firstName: "Ana Carolina",
     lastName: "Trama.",
+    role: "UX/UI & Product Designer",
     badge: "Complex? Good.",
     intro:
-      "I like complicated problems. For 8 years I've been turning complex systems, rules and journeys into clear, human and accessible digital experiences.",
+      "For 8 years I've designed digital products in rule-heavy contexts like banking, media, retail and transit. My job is to make all of that feel simple for the people using it.",
     marquee:
       "✦ Product Design — UX Strategy — AI + Design — Research — Accessibility — Complex Systems — ✦",
     cta: "Explore my work",
     nowLabel: "Currently",
-    now: ["Product Designer", "São Paulo, Brazil"],
-    solveLabel: "What I solve",
-    solve: [
-      "Complex systems. Long journeys. Business rules. Large volumes of information.",
-      "My job is to make all of it feel simple for the people using it.",
-    ],
+    now: ["Banco do Brasil, via Cast group", "São Paulo, Brazil"],
+    clientsLabel: "I've designed for",
+    clients: ["Banco do Brasil", "Itaú Unibanco", "UOL", "Via Varejo", "CPFL", "DER"],
     camera: {
       speech: "How about pressing the red button? :)",
       shutterLabel: "Fire the camera and switch the photo",
@@ -67,36 +66,31 @@ export const en: Copy = {
     links: [
       { n: "01", label: "About me", href: "#sobre" },
       { n: "02", label: "Experience", href: "#exp", arrow: true },
-      { n: "03", label: "Skills", href: "#comp" },
-      { n: "04", label: "Contact", href: "#contato", arrow: true },
+      { n: "03", label: "How I use AI", href: "#ia" },
+      { n: "04", label: "Skills", href: "#comp" },
+      { n: "05", label: "Contact", href: "#contato", arrow: true },
     ],
-    whatIDo: {
-      eyebrow: "what I do /",
-      title: "Every problem is unique and deserves individual attention.",
-      text: "Each situation calls for a different approach, from adjusting existing interfaces to creating new products. The answer is almost never on the surface.",
-      cta: "See my experience →",
-    },
   },
 
   ribbon:
-    "qualitative research ✦ quantitative research ✦ benchmark ✦ journey ✦ heuristic analysis ✦ user behavior ✦ design system ✦ accessibility ✦",
+    "qual & quant research ✦ benchmark ✦ journey ✦ heuristic analysis ✦ prototype ✦ design system ✦ accessibility ✦ handoff ✦",
 
   about: {
     kicker: "About me",
     title: "Design is a conversation before it is a screen",
-    p1: "I work on digital products end to end. My process covers research, market analysis, user journeys, heuristics and accessibility — from discovery to delivery. In the end, I turn it all into experiences that simplify processes and connect people and businesses.",
-    p2: "I design from data, conversations and behavior. AI is part of my process as a support tool, never as a replacement for design judgment.",
+    p1: "I started in graphic design, went through consulting, a news portal, retail and energy, and today I work on digital products in banking. Along the way, I learned that the most important part of my work happens before Figma.",
+    p2: "I like to start with the boring questions: who uses it, where it gets stuck and what the business rule actually requires. That's where the flow comes from, and it's why it reaches development with less back-and-forth.",
     traits: ["Creative", "Communicative", "Curious", "In love with experiences"],
     facts: [
       { k: "Experience", v: "8 years" },
-      { k: "Industries", v: "Banking & media" },
-      { k: "Non-negotiables", v: "Creating connections" },
-      { k: "I deliver", v: "Decisions, not guesses" },
+      { k: "Industries", v: "Banking, media & retail" },
+      { k: "Non-negotiable", v: "Accessibility" },
+      { k: "I deliver", v: "From flow to handoff" },
     ],
     photoHint: "your photo — vertical portrait",
     photoAlt: "Portrait of Ana Carolina Trama",
     fileTag: "profile_photo.png",
-    note: "Good experiences need a foundation. By following the process end to end, I build solutions that make sense beyond the screen.",
+    note: "Good experiences need a foundation: rules understood, flows validated, components documented. The screen is the last part.",
   },
 
   exp: {
@@ -107,7 +101,7 @@ export const en: Copy = {
         role: "UX/UI & Product Designer",
         co: "Cast group — Banco do Brasil project",
         period: "2023 — now",
-        desc: "On the Banco do Brasil account, I design journeys and interfaces for digital products used by millions of customers, balancing business rules, security and simplicity. In Figma, I build flows, high-fidelity prototypes and components aligned with the design system, with accessibility built in from the start. I use AI as day-to-day support (to synthesize research, explore alternatives and refine copy), but decisions stay grounded in data and in conversations with users. I work side by side with POs, business and engineering in agile squads, from discovery to delivery.",
+        desc: "On the Banco do Brasil account, I design journeys and interfaces for digital products used by millions of customers, balancing business rules, security and simplicity. In Figma, I build flows, high-fidelity prototypes and components aligned with the design system, with accessibility built in from the start. I work side by side with POs, business and engineering in agile squads, from discovery to delivery.",
         tags: ["Banco do Brasil", "Figma", "applied AI", "design system", "accessibility"],
         learn: "In banking, clarity is security too.",
       },
@@ -115,7 +109,7 @@ export const en: Copy = {
         role: "UX/UI & Product Designer",
         co: "NTT DATA Europe & Latam",
         period: "2021 — 2023",
-        desc: "Projects for Itaú Unibanco, Via Varejo and CPFL: web and mobile prototypes based on research and journey mapping; creating, aligning and validating app and website flows; responsive layouts and design systems. I ran user interviews and workshops, validated hypotheses through qualitative and quantitative research, and worked closely with developers to make sure solutions were understood, all within an agile methodology.",
+        desc: "On projects for Itaú Unibanco, Via Varejo and CPFL, I delivered app and website flows, web and mobile prototypes and design system components. One rule I set for the team: no flow went to development before being tested with users and reviewed with the developers.",
         tags: ["Itaú Unibanco", "Via Varejo", "CPFL", "design system", "agile"],
         learn: "A hypothesis only becomes a solution after it meets the user.",
       },
@@ -131,7 +125,7 @@ export const en: Copy = {
         role: "UX/UI Designer",
         co: "Certsys — DER",
         period: "2020 — 2021",
-        desc: "I worked on the discovery and design of critical flows in an app with millions of sessions: continuous research, end-to-end journeys and translating complex business rules into an understandable interface.",
+        desc: "I designed critical flows for a traffic app with millions of sessions, where every screen carried a rule from the agency. My most important deliverable was a record of flow decisions: the team and the client stopped re-debating what had already been settled.",
         tags: ["traffic app", "onboarding", "design system"],
         learn: "A documented decision beats a perfect prototype.",
       },
@@ -139,7 +133,7 @@ export const en: Copy = {
         role: "UX/UI Analyst",
         co: "Duratex — Internship",
         period: "2019 — 2020",
-        desc: "I created graphic pieces for major clients, structured marketing emails and designed website and landing page layouts, t-shirt prints and promotional art for products and campaigns.",
+        desc: "As an intern, I created graphic pieces for major clients, marketing emails, website layouts and art for product campaigns. It's where I learned to work with brand guidelines and tight deadlines at the same time.",
         tags: ["graphic design", "email marketing", "web layouts", "campaigns"],
         learn: "Every lesson is one more step toward discovering what we need.",
       },
@@ -147,11 +141,54 @@ export const en: Copy = {
         role: "Graphic Designer",
         co: "Tech Viking — Digital Consultancy",
         period: "2018 — 2019",
-        desc: "I worked in consulting for small and mid-sized companies, focused on improving customer journeys and experience across end-to-end processes, with an emphasis on digital product usability.",
+        desc: "Consulting for small and mid-sized companies, I mapped customer journeys and proposed usability improvements for digital products. That's where I realized the problem is almost never just on the screen.",
         tags: ["discovery", "prototyping", "handoff", "accessibility"],
         learn: "Every product deserves good usability and every customer a good experience.",
       },
     ],
+  },
+
+  ai: {
+    kicker: "AI in the process",
+    title: "AI speeds things up. I make the call.",
+    intro:
+      "I use AI as a work tool, not as an author. It comes in where the work is repetitive or exploratory; reading, deciding and owning the result stay with me.",
+    use: {
+      label: "I use it to",
+      items: [
+        "generate microcopy variations to test",
+        "summarize and organize research notes",
+        "explore alternatives before designing",
+        "review copy for clarity and accessibility",
+      ],
+    },
+    avoid: {
+      label: "I don't use it to",
+      items: [
+        "decide priority or scope",
+        "replace testing with users",
+        "enter customer data into unapproved tools",
+      ],
+    },
+    example: {
+      file: "real_case.txt",
+      eyebrow: "Real case · banking app",
+      steps: [
+        {
+          label: "Context",
+          text: "The error messages in a flow of the bank's app were confusing to the people using it.",
+        },
+        {
+          label: "What AI did",
+          text: "Generated dozens of copy variations from the flow's rules and the voice & tone guide.",
+        },
+        {
+          label: "What I did",
+          text: "Kept what was true to the rule, cut what sounded robotic and took three options to user testing.",
+        },
+      ],
+      result: "The version we chose wasn't the most creative one: it was the clearest.",
+    },
   },
 
   skills: {
@@ -191,7 +228,7 @@ export const en: Copy = {
         items: ["Design Systems", "Componentization", "Accessibility", "Usability", "Documentation", "Handoff"],
       },
     ],
-    highlight: "user ↔ business. design builds the bridge.",
+    highlight: "rule ↔ screen. design translates.",
     figjamNote: "this made sense in FigJam.",
     toolbox: {
       title: "Toolbox.exe",
@@ -223,14 +260,14 @@ export const en: Copy = {
 
   contact: {
     kicker: "Contact",
-    title: "Every problem, a new opportunity.",
-    lead: "Complex problems rarely arrive with a perfect brief. There's always a new why.",
-    text: "We start by understanding — then we organize, question, test and turn it into something that makes sense.",
+    title: "Tell me what's stuck.",
+    lead: "A confusing flow, a rule nobody understands, a product that needs to get off the ground: you don't need a finished brief.",
+    text: "I start by asking. Then I organize, test and design until it makes sense for the people who'll use it.",
     primaryCta: "Start a conversation →",
     linkedinCta: "Connect on LinkedIn ↗",
     form: {
       title: "Lines are open ★",
-      code: "form. 04",
+      code: "form. 05",
       name: "Name",
       email: "Email",
       phone: "Phone (optional)",

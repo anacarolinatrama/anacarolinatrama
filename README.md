@@ -68,12 +68,13 @@ app/
   icon.svg            favicon "AT"
 components/
   Header.tsx          header fixo + troca PT/EN
-  hero/Hero.tsx       hero + câmera polaroid (hero/PolaroidCamera.tsx) + bloco "o que eu faço"
+  hero/Hero.tsx       hero: nome + cargo em destaque, câmera polaroid (hero/PolaroidCamera.tsx)
   Ribbon.tsx          faixa vermelha rolando
   About.tsx           01. Sobre mim (+ CityScape.tsx)
   Experience.tsx      02. Trajetória
-  Skills.tsx          03. Competências — mural (skills/: StickyNotes, Toolbox, Mascot)
-  Contact.tsx         Contato (+ ContactForm.tsx)
+  AiSection.tsx       03. IA no processo — onde usa / não usa + caso real (content: `ai`)
+  Skills.tsx          04. Competências — mural (skills/: StickyNotes, Toolbox, Mascot)
+  Contact.tsx         05. Contato (+ ContactForm.tsx)
   Footer.tsx
   LanguageProvider.tsx  idioma atual (lembrado no navegador)
   ui/                 SectionKicker, Marquee, PhotoSlot

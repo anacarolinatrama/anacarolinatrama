@@ -56,7 +56,7 @@ export function Skills() {
         <span className="absolute left-[76%] top-[58%] h-[34px] w-[34px] rotate-[14deg] border-2 border-dashed border-navy opacity-30" />
       </div>
 
-      <SectionKicker number="03" label={s.kicker} className="mb-[18px]">
+      <SectionKicker number="04" label={s.kicker} className="mb-[18px]">
         <span
           aria-hidden="true"
           className="inline-block -rotate-[4deg] border-2 border-navy bg-red px-[6px] py-[3px] font-mono text-[8px] uppercase tracking-[.14em] text-cream"

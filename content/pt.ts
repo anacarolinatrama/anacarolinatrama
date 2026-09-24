@@ -3,15 +3,16 @@ import type { Copy } from "./types";
 export const pt: Copy = {
   htmlLang: "pt-BR",
   meta: {
-    title: "Ana Carolina Trama — UX/UI · Product Designer",
+    title: "Ana Carolina Trama — UX/UI & Product Designer",
     description:
-      "De humanos para humanos. Problemas não são impeditivos: são o que ainda não foi descoberto.",
+      "Ana Carolina Trama, UX/UI & Product Designer. Há 8 anos desenha produtos digitais para banco, mídia e varejo — hoje, no Banco do Brasil.",
   },
   header: { home: "Ana Trama — voltar ao início", langLabel: "idioma /", navLabel: "Seções" },
   nav: [
     { label: "Início", href: "#inicio" },
     { label: "Quem sou", href: "#sobre" },
     { label: "Ver cases", href: "#exp" },
+    { label: "IA", href: "#ia" },
     { label: "O que faço", href: "#comp" },
     { label: "Contato", href: "#contato" },
   ],
@@ -20,19 +21,17 @@ export const pt: Copy = {
     hello: "Hello, stranger.",
     firstName: "Ana Carolina",
     lastName: "Trama.",
+    role: "UX/UI & Product Designer",
     badge: "Complex? Good.",
     intro:
-      "Eu gosto de problemas complicados. Há 8 anos transformo sistemas, regras e jornadas complexas em experiências digitais claras, humanas e acessíveis.",
+      "Há 8 anos desenho produtos digitais em contextos cheios de regra, como banco, mídia, varejo e trânsito. Meu trabalho é fazer isso parecer simples para quem usa.",
     marquee:
       "✦ Product Design — UX Strategy — AI + Design — Research — Accessibility — Complex Systems — ✦",
     cta: "Explore meu trabalho",
     nowLabel: "Atualmente",
-    now: ["Product Designer", "São Paulo, Brasil"],
-    solveLabel: "O que eu resolvo",
-    solve: [
-      "Sistemas complexos. Jornadas extensas. Regras de negócio. Grandes volumes de informação.",
-      "Meu trabalho é fazer tudo isso parecer simples para quem usa.",
-    ],
+    now: ["Banco do Brasil, pela Cast group", "São Paulo, Brasil"],
+    clientsLabel: "Já desenhei para",
+    clients: ["Banco do Brasil", "Itaú Unibanco", "UOL", "Via Varejo", "CPFL", "DER"],
     camera: {
       speech: "Que tal pressionar o botão vermelho? :)",
       shutterLabel: "Disparar a câmera e trocar a fotografia",
@@ -65,36 +64,31 @@ export const pt: Copy = {
     links: [
       { n: "01", label: "Quem sou", href: "#sobre" },
       { n: "02", label: "Ver cases", href: "#exp", arrow: true },
-      { n: "03", label: "O que faço", href: "#comp" },
-      { n: "04", label: "Contato", href: "#contato", arrow: true },
+      { n: "03", label: "Como uso IA", href: "#ia" },
+      { n: "04", label: "O que faço", href: "#comp" },
+      { n: "05", label: "Contato", href: "#contato", arrow: true },
     ],
-    whatIDo: {
-      eyebrow: "o que eu faço /",
-      title: "Todo problema é único e precisa de atenção individual.",
-      text: "Cada situação exige uma abordagem diferente, desde ajustes em interfaces existentes até a criação de novos produtos. Quase sempre, a resposta não está na superfície.",
-      cta: "Ver cases →",
-    },
   },
 
   ribbon:
-    "pesquisa quali ✦ pesquisa quanti ✦ benchmark ✦ jornada ✦ análise heurística ✦ comportamento do usuário ✦ design system ✦ acessibilidade ✦",
+    "pesquisa quali e quanti ✦ benchmark ✦ jornada ✦ análise heurística ✦ protótipo ✦ design system ✦ acessibilidade ✦ handoff ✦",
 
   about: {
     kicker: "Sobre mim",
     title: "Design é conversa antes de ser tela",
-    p1: "Trabalho com produtos digitais de ponta a ponta. Meu processo passa por pesquisa, análise de mercado, jornada do usuário, heurísticas e acessibilidade — da descoberta à entrega. No fim, transformo tudo isso em experiências que descompliquem processos e conectem pessoas e negócios.",
-    p2: "Desenho a partir de dados, conversas e comportamento. IA faz parte do meu processo como ferramenta de apoio, nunca como substituta da decisão de design.",
+    p1: "Comecei no design gráfico, passei por consultoria, portal de notícias, varejo e energia, e hoje trabalho com produto digital em banco. No caminho, aprendi que a parte mais importante do meu trabalho acontece antes do Figma.",
+    p2: "Gosto de começar pelas perguntas chatas: quem usa, onde trava e o que a regra de negócio realmente exige. É daí que sai o fluxo, e é por isso que ele chega ao desenvolvimento com menos idas e vindas.",
     traits: ["Criativa", "Comunicativa", "Curiosa", "Apaixonada por experiências"],
     facts: [
       { k: "Experiência", v: "8 anos" },
-      { k: "Setores", v: "Bancos e mídia" },
-      { k: "Inegociáveis", v: "Criar conexões" },
-      { k: "Entrego", v: "Decisão, não achismo" },
+      { k: "Setores", v: "Banco, mídia e varejo" },
+      { k: "Inegociável", v: "Acessibilidade" },
+      { k: "Entrego", v: "Do fluxo ao handoff" },
     ],
     photoHint: "sua foto — retrato vertical",
     photoAlt: "Retrato de Ana Carolina Trama",
     fileTag: "foto_de_perfil.png",
-    note: "Boas experiências precisam de fundação. É acompanhando o processo de ponta a ponta que eu construo soluções que fazem sentido além da tela.",
+    note: "Boas experiências precisam de fundação: regra entendida, fluxo validado, componente documentado. A tela é a última parte.",
   },
 
   exp: {
@@ -105,7 +99,7 @@ export const pt: Copy = {
         role: "UX/UI & Product Designer",
         co: "Cast group — projeto Banco do Brasil",
         period: "2023 — hoje",
-        desc: "Alocada no Banco do Brasil, desenho jornadas e interfaces de produtos digitais usados por milhões de clientes, equilibrando regras de negócio, segurança e simplicidade. No Figma, construo fluxos, protótipos de alta fidelidade e componentes alinhados ao design system, com acessibilidade desde o início. Uso IA como apoio no dia a dia (para sintetizar pesquisas, explorar alternativas e refinar textos), mas as decisões seguem baseadas em dados e em conversas com usuários. Trabalho lado a lado com PO, negócio e desenvolvimento em squads ágeis, do discovery à entrega.",
+        desc: "Alocada no Banco do Brasil, desenho jornadas e interfaces de produtos digitais usados por milhões de clientes, equilibrando regras de negócio, segurança e simplicidade. No Figma, construo fluxos, protótipos de alta fidelidade e componentes alinhados ao design system, com acessibilidade desde o início. Trabalho lado a lado com PO, negócio e desenvolvimento em squads ágeis, do discovery à entrega.",
         tags: ["Banco do Brasil", "Figma", "IA aplicada", "design system", "acessibilidade"],
         learn: "Em banco, clareza também é segurança.",
       },
@@ -113,7 +107,7 @@ export const pt: Copy = {
         role: "UX/UI & Product Designer",
         co: "NTT DATA Europe & Latam",
         period: "2021 — 2023",
-        desc: "Projetos para Itaú Unibanco, Via Varejo e CPFL: protótipos web e mobile a partir de pesquisa e mapeamento de jornada; criação, alinhamento e validação de fluxos de apps e sites; layouts responsivos e design system. Conduzi entrevistas e dinâmicas com usuários, validei hipóteses com pesquisas quali e quanti e mantive contato constante com o time de desenvolvimento para garantir o entendimento das soluções, em metodologia ágil.",
+        desc: "Em projetos para Itaú Unibanco, Via Varejo e CPFL, entreguei fluxos de apps e sites, protótipos web e mobile e componentes de design system. Uma regra que adotei no time: nenhum fluxo ia para o desenvolvimento sem antes passar por teste com usuários e por uma revisão técnica com os devs.",
         tags: ["Itaú Unibanco", "Via Varejo", "CPFL", "design system", "ágil"],
         learn: "Hipótese só vira solução depois de passar pelo usuário.",
       },
@@ -129,7 +123,7 @@ export const pt: Copy = {
         role: "UX/UI Designer",
         co: "Certsys — DER",
         period: "2020 — 2021",
-        desc: "Atuei na descoberta e no desenho de fluxos críticos de um aplicativo com milhões de acessos: pesquisa contínua, jornada de ponta a ponta e tradução de regras de negócio complexas em uma interface compreensível.",
+        desc: "Desenhei fluxos críticos de um aplicativo de trânsito com milhões de acessos, em que cada tela carregava uma regra do órgão. Minha entrega mais importante foi o registro das decisões de fluxo: time e cliente pararam de rediscutir o que já estava resolvido.",
         tags: ["app de trânsito", "onboarding", "design system"],
         learn: "Decisão documentada vale mais que protótipo perfeito.",
       },
@@ -137,7 +131,7 @@ export const pt: Copy = {
         role: "Analista de UX/UI",
         co: "Duratex — Estágio",
         period: "2019 — 2020",
-        desc: "Atuei na criação de peças gráficas para grandes clientes, na estruturação de e-mails marketing, em layouts de sites e páginas digitais, em estampas de camisetas e em artes para a divulgação de produtos e campanhas.",
+        desc: "No estágio, criei peças gráficas para grandes clientes, e-mails marketing, layouts de sites e artes para campanhas de produto. Foi onde aprendi a trabalhar com guia de marca e prazo curto ao mesmo tempo.",
         tags: ["peças gráficas", "e-mail marketing", "layouts web", "campanhas"],
         learn: "Todo aprendizado é mais uma etapa para descobrir o que precisamos.",
       },
@@ -145,11 +139,56 @@ export const pt: Copy = {
         role: "Designer Gráfico",
         co: "Tech Viking — Consultoria Digital",
         period: "2018 — 2019",
-        desc: "Atuei em consultoria para empresas de pequeno e médio porte, com foco em melhorar a jornada e a experiência dos clientes em processos de ponta a ponta e ênfase na usabilidade de produtos digitais.",
+        desc: "Em consultoria para pequenas e médias empresas, mapeei a jornada dos clientes e propus melhorias de usabilidade em produtos digitais. Foi ali que percebi que o problema quase nunca está só na tela.",
         tags: ["descoberta", "prototipação", "handoff", "acessibilidade"],
         learn: "Todo produto merece uma boa usabilidade e todo cliente uma boa experiência.",
       },
     ],
+  },
+
+  ai: {
+    kicker: "IA no processo",
+    title: "IA acelera. Quem decide sou eu.",
+    intro:
+      "Uso IA como ferramenta de trabalho, não como autora. Ela entra onde o trabalho é repetitivo ou exploratório; a leitura, a decisão e a responsabilidade continuam comigo.",
+    use: {
+      label: "Uso para",
+      items: [
+        "gerar variações de microcopy para testar",
+        "resumir e organizar anotações de pesquisa",
+        "explorar alternativas antes de desenhar",
+        "revisar clareza e acessibilidade de textos",
+      ],
+    },
+    avoid: {
+      label: "Não uso para",
+      items: [
+        "decidir prioridade ou escopo",
+        "substituir teste com usuário",
+        "inserir dados de clientes em ferramentas não aprovadas",
+      ],
+    },
+    // ⚠ Caso de exemplo escrito a partir do trabalho no Banco do Brasil — a Ana deve confirmar
+    //   ou trocar pelos detalhes reais (a estrutura contexto → IA → eu → resultado se mantém).
+    example: {
+      file: "caso_real.txt",
+      eyebrow: "Caso real · app bancário",
+      steps: [
+        {
+          label: "Contexto",
+          text: "As mensagens de erro de um fluxo do app do banco estavam confusas para quem usava.",
+        },
+        {
+          label: "O que a IA fez",
+          text: "Gerou dezenas de variações de texto a partir das regras do fluxo e do guia de linguagem.",
+        },
+        {
+          label: "O que eu fiz",
+          text: "Filtrei o que era fiel à regra, cortei o que soava robótico e levei três opções para teste com usuários.",
+        },
+      ],
+      result: "A versão escolhida não foi a mais criativa: foi a mais clara.",
+    },
   },
 
   skills: {
@@ -189,7 +228,7 @@ export const pt: Copy = {
         items: ["Design Systems", "Componentização", "Acessibilidade", "Usabilidade", "Documentação", "Handoff"],
       },
     ],
-    highlight: "usuário ↔ negócio. design faz a ponte.",
+    highlight: "regra ↔ tela. design traduz.",
     figjamNote: "isso fazia sentido no FigJam.",
     toolbox: {
       title: "Toolbox.exe",
@@ -208,8 +247,8 @@ export const pt: Copy = {
     notesHint: "Post-it arrastável. Use as setas do teclado para mover.",
     dragHint: {
       lead: "Psiu!",
-      mouse: "Os post-its deste mural saem do lugar — clique e arraste para mexer neles.",
-      touch: "Os post-its deste mural saem do lugar — toque e arraste para mexer neles.",
+      mouse: "Os post it's desse mural saem do lugar, clique e interaja para encontrar o mascote escondido.",
+      touch: "Os post it's desse mural saem do lugar, clique e interaja para encontrar o mascote escondido.",
     },
     mascot: "Mascote acenando",
     year: "1998 ★",
@@ -221,14 +260,14 @@ export const pt: Copy = {
 
   contact: {
     kicker: "Contato",
-    title: "Para cada problema, uma nova oportunidade.",
-    lead: "Problemas complexos raramente chegam com briefing perfeito. Sempre existe um novo porquê.",
-    text: "A gente começa entendendo — depois organiza, questiona, testa e transforma em algo que faça sentido.",
+    title: "Me conta o que está travando.",
+    lead: "Fluxo confuso, regra que ninguém entende, produto que precisa sair do papel: não precisa chegar com briefing pronto.",
+    text: "Eu começo perguntando. Depois organizo, testo e desenho até fazer sentido para quem vai usar.",
     primaryCta: "Começar uma conversa →",
     linkedinCta: "Conectar no LinkedIn ↗",
     form: {
       title: "Linha aberta ★",
-      code: "form. 04",
+      code: "form. 05",
       name: "Nome",
       email: "E-mail",
       phone: "Celular (opcional)",
