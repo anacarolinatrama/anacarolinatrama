@@ -1,7 +1,7 @@
 import type { Copy } from "./types";
 
-// Tradução do conteúdo atual em PT. Textos que estavam só em PT no protótipo
-// (hero, competências, contato) foram traduzidos aqui — vale uma revisão da Ana.
+// Espelho de content/pt.ts. Onde o texto em PT é o mesmo do protótipo, segue a tradução do
+// i18n.js (v2/); onde o PT mudou depois do i18n, a tradução foi refeita a partir do PT atual.
 export const en: Copy = {
   htmlLang: "en",
   meta: {
@@ -13,8 +13,8 @@ export const en: Copy = {
   nav: [
     { label: "Home", href: "#inicio" },
     { label: "About", href: "#sobre" },
-    { label: "What I do", href: "#comp" },
-    { label: "See cases", href: "#exp" },
+    { label: "Experience", href: "#exp" },
+    { label: "Skills", href: "#comp" },
     { label: "Contact", href: "#contato" },
   ],
 
@@ -29,7 +29,7 @@ export const en: Copy = {
       "✦ Product Design — UX Strategy — AI + Design — Research — Accessibility — Complex Systems — ✦",
     cta: "Explore my work",
     nowLabel: "Currently",
-    now: ["Product Designer", "São Paulo, Brazil", "Available for freelance projects"],
+    now: ["Product Designer", "São Paulo, Brazil"],
     solveLabel: "What I solve",
     solve: [
       "Complex systems. Long journeys. Business rules. Large volumes of information.",
@@ -66,15 +66,15 @@ export const en: Copy = {
     },
     links: [
       { n: "01", label: "About me", href: "#sobre" },
-      { n: "02", label: "What I do", href: "#comp" },
-      { n: "03", label: "See cases", href: "#exp", arrow: true },
+      { n: "02", label: "Experience", href: "#exp", arrow: true },
+      { n: "03", label: "Skills", href: "#comp" },
       { n: "04", label: "Contact", href: "#contato", arrow: true },
     ],
     whatIDo: {
       eyebrow: "what I do /",
       title: "Every problem is unique and deserves individual attention.",
       text: "Each situation calls for a different approach, from adjusting existing interfaces to creating new products. The answer is almost never on the surface.",
-      cta: "See cases →",
+      cta: "See my experience →",
     },
   },
 
@@ -84,9 +84,9 @@ export const en: Copy = {
   about: {
     kicker: "About me",
     title: "Design is a conversation before it is a screen",
-    p1: "I work on digital products end to end. My process goes through research, market analysis, user journeys, heuristics and accessibility — from discovery to delivery. In the end, I turn all of it into experiences that simplify processes and connect people and businesses.",
+    p1: "I work on digital products end to end. My process covers research, market analysis, user journeys, heuristics and accessibility — from discovery to delivery. In the end, I turn it all into experiences that simplify processes and connect people and businesses.",
     p2: "I design from data, conversations and behavior. AI is part of my process as a support tool, never as a replacement for design judgment.",
-    traits: ["Creative", "Outspoken", "Curious", "In love with experiences"],
+    traits: ["Creative", "Communicative", "Curious", "In love with experiences"],
     facts: [
       { k: "Experience", v: "8 years" },
       { k: "Industries", v: "Banking & media" },
@@ -107,7 +107,7 @@ export const en: Copy = {
         role: "UX/UI & Product Designer",
         co: "Cast group — Banco do Brasil project",
         period: "2023 — now",
-        desc: "Allocated to Banco do Brasil, I design journeys and interfaces for digital products used by millions of customers, balancing business rules, security and simplicity. In Figma, I build flows, high-fidelity prototypes and components aligned with the design system, with accessibility from the start. I use AI as day-to-day support — to synthesize research, explore alternatives and refine copy — while decisions stay grounded in data and conversations with users. I work side by side with POs, business and engineering in agile squads, from discovery to delivery.",
+        desc: "On the Banco do Brasil account, I design journeys and interfaces for digital products used by millions of customers, balancing business rules, security and simplicity. In Figma, I build flows, high-fidelity prototypes and components aligned with the design system, with accessibility built in from the start. I use AI as day-to-day support (to synthesize research, explore alternatives and refine copy), but decisions stay grounded in data and in conversations with users. I work side by side with POs, business and engineering in agile squads, from discovery to delivery.",
         tags: ["Banco do Brasil", "Figma", "applied AI", "design system", "accessibility"],
         learn: "In banking, clarity is security too.",
       },
@@ -115,7 +115,7 @@ export const en: Copy = {
         role: "UX/UI & Product Designer",
         co: "NTT DATA Europe & Latam",
         period: "2021 — 2023",
-        desc: "Projects for Itaú Unibanco, Via Varejo and CPFL: web and mobile prototypes built from research and journey mapping; creating, aligning and validating app and website flows, responsive layouts and design systems. User interviews and workshops, hypothesis validation through qualitative and quantitative research, and close contact with developers to make sure solutions were understood — all within an agile methodology.",
+        desc: "Projects for Itaú Unibanco, Via Varejo and CPFL: web and mobile prototypes based on research and journey mapping; creating, aligning and validating app and website flows; responsive layouts and design systems. I ran user interviews and workshops, validated hypotheses through qualitative and quantitative research, and worked closely with developers to make sure solutions were understood, all within an agile methodology.",
         tags: ["Itaú Unibanco", "Via Varejo", "CPFL", "design system", "agile"],
         learn: "A hypothesis only becomes a solution after it meets the user.",
       },
@@ -123,7 +123,7 @@ export const en: Copy = {
         role: "UX/UI Designer",
         co: "PeoplePRO — UOL project",
         period: "2020",
-        desc: "Allocated to UOL – Universo Online, designing interfaces, products and services around users' needs: navigation maps, prototypes, layouts and input on the copy. Customer research and competitor analysis to find improvements; created and rolled out UOL's visual language across products, with styleguides and libraries aligned to the master guide. Followed layout implementation and presented and defended concepts to internal clients.",
+        desc: "Allocated to UOL (Universo Online), I designed interfaces, products and services around users' needs: navigation maps, prototypes, layouts and input on the copy. I ran customer research and competitor analysis to find improvements, and created and rolled out UOL's visual language across its products, with styleguides and libraries aligned to the master guide. I also followed layout implementation and presented and defended concepts to internal clients.",
         tags: ["UOL", "styleguide", "prototypes", "customer research"],
         learn: "Visual consistency is what makes a big product feel like one.",
       },
@@ -131,23 +131,23 @@ export const en: Copy = {
         role: "UX/UI Designer",
         co: "Certsys — DER",
         period: "2020 — 2021",
-        desc: "Discovery and design of critical flows in an app with millions of sessions: continuous research, end-to-end journeys and translating complex business rules into an understandable interface.",
-        tags: ["banking app", "onboarding", "design system"],
+        desc: "I worked on the discovery and design of critical flows in an app with millions of sessions: continuous research, end-to-end journeys and translating complex business rules into an understandable interface.",
+        tags: ["traffic app", "onboarding", "design system"],
         learn: "A documented decision beats a perfect prototype.",
       },
       {
         role: "UX/UI Analyst",
         co: "Duratex — Internship",
         period: "2019 — 2020",
-        desc: "Created graphic pieces for major clients, structured email marketing, designed website and landing page layouts, t-shirt prints and promotional art for products and campaigns.",
-        tags: ["news portal", "paywall", "accessibility"],
+        desc: "I created graphic pieces for major clients, structured marketing emails and designed website and landing page layouts, t-shirt prints and promotional art for products and campaigns.",
+        tags: ["graphic design", "email marketing", "web layouts", "campaigns"],
         learn: "Every lesson is one more step toward discovering what we need.",
       },
       {
         role: "Graphic Designer",
         co: "Tech Viking — Digital Consultancy",
         period: "2018 — 2019",
-        desc: "Consulting for small and mid-sized companies, focused on improving customer journeys and experience across end-to-end processes. Emphasis on digital product usability.",
+        desc: "I worked in consulting for small and mid-sized companies, focused on improving customer journeys and experience across end-to-end processes, with an emphasis on digital product usability.",
         tags: ["discovery", "prototyping", "handoff", "accessibility"],
         learn: "Every product deserves good usability and every customer a good experience.",
       },
@@ -204,7 +204,7 @@ export const en: Copy = {
     ctrlz: "ctrl + z is self-care.",
     notes: [
       "RULE #01 — Never assume.",
-      "RULE #02 — Ask “why?”. Then ask again.",
+      "RULE #02 — Ask “why?” Then ask again.",
       "testing > guessing",
     ],
     notesHint: "Draggable sticky note. Use the arrow keys to move it.",
@@ -229,14 +229,14 @@ export const en: Copy = {
     primaryCta: "Start a conversation →",
     linkedinCta: "Connect on LinkedIn ↗",
     form: {
-      title: "Line open ★",
+      title: "Lines are open ★",
       code: "form. 04",
       name: "Name",
       email: "Email",
       phone: "Phone (optional)",
-      context: "Short context",
+      context: "Brief context",
       placeholder:
-        "Tell me a bit about the project, opportunity or problem — it doesn't need to be organized :)",
+        "Tell me a bit about the project, opportunity or problem — it doesn't have to be tidy :)",
       submit: "Send message →",
       note: "Opens WhatsApp with your message ready.",
     },
