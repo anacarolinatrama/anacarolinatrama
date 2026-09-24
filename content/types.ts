@@ -26,14 +26,17 @@ export type Copy = {
     hello: string;
     firstName: string;
     lastName: string;
+    /** Cargo em destaque logo abaixo do nome */
+    role: string;
     badge: string;
     intro: string;
     marquee: string;
     cta: string;
     nowLabel: string;
     now: string[];
-    solveLabel: string;
-    solve: string[];
+    /** Prova rápida: empresas/projetos por onde a Ana passou */
+    clientsLabel: string;
+    clients: string[];
     camera: {
       speech: string;
       shutterLabel: string;
@@ -44,8 +47,6 @@ export type Copy = {
       captions: { title: string; text: string; alt: string }[];
     };
     links: { n: string; label: string; href: string; arrow?: boolean }[];
-    /** Bloco "o que eu faço", logo abaixo do hero */
-    whatIDo: { eyebrow: string; title: string; text: string; cta: string };
   };
   ribbon: string;
   about: {
@@ -64,6 +65,20 @@ export type Copy = {
     kicker: string;
     title: string;
     items: Experience[];
+  };
+  /** 03. IA no processo — único lugar do site que explica o uso de IA */
+  ai: {
+    kicker: string;
+    title: string;
+    intro: string;
+    use: { label: string; items: string[] };
+    avoid: { label: string; items: string[] };
+    example: {
+      file: string;
+      eyebrow: string;
+      steps: { label: string; text: string }[];
+      result: string;
+    };
   };
   skills: {
     kicker: string;

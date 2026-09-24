@@ -1,4 +1,5 @@
 import { About } from "@/components/About";
+import { AiSection } from "@/components/AiSection";
 import { Contact } from "@/components/Contact";
 import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
@@ -18,6 +19,7 @@ export default function Home() {
           <Ribbon />
           <About />
           <Experience />
+          <AiSection />
           <Skills />
           <Contact />
         </main>

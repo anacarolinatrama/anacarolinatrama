@@ -72,7 +72,7 @@ export function Contact() {
         <div className="relative flex flex-wrap items-start gap-[clamp(24px,4vw,56px)]">
           {/* ---------- texto ---------- */}
           <div className="min-w-[min(280px,100%)] flex-[1_1_420px]">
-            <span className="font-mono text-[10px] uppercase tracking-[.2em] text-cream">04. {c.kicker}</span>
+            <span className="font-mono text-[10px] uppercase tracking-[.2em] text-cream">05. {c.kicker}</span>
             <h2 className="m-0 mt-3 max-w-[20ch] text-pretty font-display text-[clamp(28px,6vw,72px)] uppercase leading-[.9] text-cream">
               {c.title}
             </h2>
