@@ -43,6 +43,13 @@ A descrição de cada foto para leitores de tela fica em `hero.camera.captions[]
 Ficam em `exp.items` (`content/pt.ts` / `content/en.ts`), do mais recente (01) para o mais antigo.
 Para esconder um item sem apagar o texto, adicione `hidden: true` nele.
 
+### Projetos
+
+Cada projeto tem o link, a cor da prévia e (opcional) um print em `content/projects.ts`;
+o tipo, a descrição, o papel e as tags ficam em `projects.items` (`content/pt.ts` / `content/en.ts`), com o mesmo `id`.
+Os cards usam prints reais da primeira dobra de cada site (`public/projects/*.webp`, 800×500, 16:10), apontados em `image`.
+Para atualizar, substitua o arquivo mantendo o nome. Sem `image`, o card mostra uma prévia desenhada em CSS.
+
 ### Currículo (/cv)
 
 Página `/cv` com o currículo no visual do site, em PT/EN (`/cv?lang=pt` ou `/cv?lang=en`).
@@ -78,13 +85,14 @@ components/
   hero/Hero.tsx       hero: nome + cargo em destaque, câmera polaroid (hero/PolaroidCamera.tsx)
   Ribbon.tsx          faixa vermelha rolando
   About.tsx           01. Sobre mim (+ CityScape.tsx)
-  Experience.tsx      02. Trajetória
-  AiSection.tsx       03. IA no processo — onde usa / não usa + caso real (content: `ai`)
-  Skills.tsx          04. Competências — mural (skills/: StickyNotes, Toolbox, Mascot)
-  Contact.tsx         05. Contato (+ ContactForm.tsx)
+  Experience.tsx      02. Trajetória (+ bloco Formação)
+  Projects.tsx        03. Projetos no ar (links: content/projects.ts; textos: `projects` em pt/en)
+  AiSection.tsx       04. IA no processo — onde usa / não usa + caso real (content: `ai`)
+  Skills.tsx          05. Competências — mural (skills/: StickyNotes, Toolbox, Mascot)
+  Contact.tsx         06. Contato (+ ContactForm.tsx)
   Footer.tsx
   LanguageProvider.tsx  idioma atual (lembrado no navegador)
   ui/                 SectionKicker, Marquee, PhotoSlot
 content/              textos PT/EN + links/fotos
-public/               telefone-90.png, photos/ (perfil + polaroid)
+public/               telefone-90.png, photos/ (perfil + polaroid), projects/ (prints dos sites)
 ```

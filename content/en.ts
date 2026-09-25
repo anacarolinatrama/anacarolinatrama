@@ -14,6 +14,7 @@ export const en: Copy = {
     { label: "Home", href: "#inicio" },
     { label: "About", href: "#sobre" },
     { label: "Experience", href: "#exp" },
+    { label: "Projects", href: "#projetos" },
     { label: "AI", href: "#ia" },
     { label: "Skills", href: "#comp" },
     { label: "Contact", href: "#contato" },
@@ -66,10 +67,11 @@ export const en: Copy = {
     },
     links: [
       { n: "01", label: "About me", href: "#sobre" },
-      { n: "02", label: "Experience", href: "#exp", arrow: true },
-      { n: "03", label: "How I use AI", href: "#ia" },
-      { n: "04", label: "Skills", href: "#comp" },
-      { n: "05", label: "Contact", href: "#contato", arrow: true },
+      { n: "02", label: "Experience", href: "#exp" },
+      { n: "03", label: "Projects", href: "#projetos", arrow: true },
+      { n: "04", label: "How I use AI", href: "#ia" },
+      { n: "05", label: "Skills", href: "#comp" },
+      { n: "06", label: "Contact", href: "#contato", arrow: true },
     ],
   },
 
@@ -146,6 +148,38 @@ export const en: Copy = {
         desc: "Consulting for small and mid-sized companies, I mapped customer journeys and proposed usability improvements for digital products. That's where I realized the problem is almost never just on the screen.",
         tags: ["discovery", "prototyping", "handoff", "accessibility"],
         learn: "Every product deserves good usability and every customer a good experience.",
+      },
+    ],
+  },
+
+  projects: {
+    kicker: "Projects",
+    title: "Live projects",
+    intro:
+      "Published sites you can open right now — made with Avellen, the design and technology consultancy I'm part of.",
+    visit: "Visit site",
+    roleLabel: "My role",
+    items: [
+      {
+        id: "avellen",
+        type: "Company website",
+        desc: "Website for our design and technology consultancy. I organized the services, the website plans (Essential, Professional and Business), the projects and the FAQ so visitors get to the contact step without detours.",
+        role: "UX/UI design",
+        tags: ["information architecture", "pricing plans", "conversion"],
+      },
+      {
+        id: "castherm",
+        type: "B2B catalog · client",
+        desc: "Website for a reseller of measuring instruments (Kestrel, Fluke, Dwyer). A catalog you can browse by category and by industry, featured products and fast quote requests via WhatsApp.",
+        role: "UX/UI design",
+        tags: ["catalog", "WhatsApp quotes", "B2B"],
+      },
+      {
+        id: "cezar",
+        type: "Portfolio",
+        desc: "Portfolio of a software engineer focused on frontend, cloud and AI. A dark, “cyber maximalist” look designed to present technical work with personality.",
+        role: "UX/UI design",
+        tags: ["portfolio", "dark mode", "visual direction"],
       },
     ],
   },
@@ -269,7 +303,7 @@ export const en: Copy = {
     linkedinCta: "Connect on LinkedIn ↗",
     form: {
       title: "Lines are open ★",
-      code: "form. 05",
+      code: "form. 06",
       name: "Name",
       email: "Email",
       phone: "Phone (optional)",
