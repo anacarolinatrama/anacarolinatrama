@@ -1,12 +1,14 @@
 "use client";
 
+import { cv } from "@/content/cv";
 import { useLanguage } from "./LanguageProvider";
 import { SectionKicker } from "./ui/SectionKicker";
 
 /** 02. Trajetória — um card horizontal por experiência, do mais recente (01) ao mais antigo. */
 export function Experience() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   const e = t.exp;
+  const education = cv[lang].education;
   const items = e.items.filter((it) => !it.hidden);
 
   return (
@@ -52,6 +54,29 @@ export function Experience() {
             </div>
           </article>
         ))}
+      </div>
+
+      {/* ---------- formação (mesmos dados do currículo: content/cv.ts) ---------- */}
+      <div className="mt-[clamp(28px,4vw,48px)]">
+        <div className="mb-[18px] flex items-baseline gap-[10px]">
+          <h3 className="m-0 font-display text-[clamp(20px,2.6vw,30px)] font-normal uppercase text-gold">
+            {e.educationTitle}
+          </h3>
+          <span aria-hidden="true" className="h-[4px] flex-1 bg-red" />
+        </div>
+        <ul className="m-0 grid list-none gap-[14px] p-0 md:grid-cols-2">
+          {education.map((ed) => (
+            <li key={`${ed.course}-${ed.school}`} className="flex border-[3px] border-gold bg-cream">
+              <span className="flex w-[112px] flex-none items-center justify-center border-r-[3px] border-navy bg-red px-3 py-4 text-center font-mono text-[11px] uppercase leading-[1.3] tracking-[.1em] text-cream">
+                {ed.period}
+              </span>
+              <span className="flex min-w-0 flex-col justify-center gap-1 p-[18px]">
+                <span className="font-display text-[16px] uppercase leading-[1.15] text-navy">{ed.course}</span>
+                <span className="text-[14px] font-medium text-navy">{ed.school}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

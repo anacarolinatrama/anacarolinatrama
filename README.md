@@ -43,6 +43,12 @@ A descrição de cada foto para leitores de tela fica em `hero.camera.captions[]
 Ficam em `exp.items` (`content/pt.ts` / `content/en.ts`), do mais recente (01) para o mais antigo.
 Para esconder um item sem apagar o texto, adicione `hidden: true` nele.
 
+### Currículo (/cv)
+
+Página `/cv` com o currículo no visual do site, em PT/EN (`/cv?lang=pt` ou `/cv?lang=en`).
+O botão "Baixar PDF" abre a impressão do navegador já formatada em A4 — é só escolher "Salvar como PDF".
+Experiências e competências vêm do mesmo conteúdo do portfólio; resumo, ferramentas, formação e idiomas ficam em `content/cv.ts`.
+
 ### Formulário de contato
 
 Ao clicar em "Enviar mensagem", o site monta um texto com os campos preenchidos (nome, e-mail, celular formatado e contexto)
@@ -64,6 +70,7 @@ Cada `git push` na branch `main` publica uma nova versão automaticamente.
 app/
   layout.tsx          fontes (next/font) + metadata
   page.tsx            composição das seções
+  cv/page.tsx         página do currículo (components/cv/CvPage.tsx)
   globals.css         base + keyframes + reduced-motion
   icon.svg            favicon "AT"
 components/

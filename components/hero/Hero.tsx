@@ -6,7 +6,7 @@ import { useLanguage } from "../LanguageProvider";
 import { PolaroidCamera } from "./PolaroidCamera";
 
 export function Hero() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   const h = t.hero;
 
   return (
@@ -69,12 +69,20 @@ export function Hero() {
                 />
               </div>
 
-              <a
-                href="#exp"
-                className="inline-flex items-center gap-2 rounded-[6px] border-2 border-navy bg-gold px-[14px] py-[9px] font-display text-[12px] uppercase tracking-[.1em] text-navy no-underline shadow-[4px_4px_0_#12224C] transition-colors hover:bg-red hover:text-cream max-md:min-h-[44px]"
-              >
-                {h.cta} <span className="font-mono text-[13px]">→</span>
-              </a>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="#exp"
+                  className="inline-flex items-center gap-2 rounded-[6px] border-2 border-navy bg-gold px-[14px] py-[9px] font-display text-[12px] uppercase tracking-[.1em] text-navy no-underline shadow-[4px_4px_0_#12224C] transition-colors hover:bg-red hover:text-cream max-md:min-h-[44px]"
+                >
+                  {h.cta} <span className="font-mono text-[13px]">→</span>
+                </a>
+                <a
+                  href={`/cv?lang=${lang}`}
+                  className="inline-flex items-center gap-2 rounded-[6px] border-2 border-gold px-[14px] py-[9px] font-display text-[12px] uppercase tracking-[.1em] text-gold no-underline transition-colors hover:bg-gold hover:text-navy max-md:min-h-[44px]"
+                >
+                  {h.cvCta} <span className="font-mono text-[13px]">↓</span>
+                </a>
+              </div>
             </div>
 
             <div className="flex flex-col gap-[6px] border-t-2 border-gold pt-[14px]">
