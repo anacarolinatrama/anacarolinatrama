@@ -59,7 +59,9 @@ export const cv: Record<Lang, CvCopy> = {
     ],
     education: [
       { course: "Formação em UX & UI Design", school: "UX Unicórnio", period: "2025" },
+      { course: "Formação em Design Thinking & UX Strategy", school: "ALURA", period: "2021 — 2025" },
       { course: "Design Gráfico", school: "Universidade Anhembi Morumbi", period: "2021 — 2023" },
+    
     ],
     languages: [
       { name: "Português", level: "Nativo" },
@@ -99,6 +101,7 @@ export const cv: Record<Lang, CvCopy> = {
     ],
     education: [
       { course: "UX & UI Design Program", school: "UX Unicórnio", period: "2025" },
+      { course: "Design Thinking & UX Strategy Program", school: "ALURA", period: "2021 — 2025" },
       { course: "Graphic Design", school: "Anhembi Morumbi University", period: "2021 — 2023" },
     ],
     languages: [
