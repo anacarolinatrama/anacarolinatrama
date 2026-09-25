@@ -11,7 +11,8 @@ export const pt: Copy = {
   nav: [
     { label: "Início", href: "#inicio" },
     { label: "Quem sou", href: "#sobre" },
-    { label: "Ver cases", href: "#exp" },
+    { label: "Trajetória", href: "#exp" },
+    { label: "Projetos", href: "#projetos" },
     { label: "IA", href: "#ia" },
     { label: "O que faço", href: "#comp" },
     { label: "Contato", href: "#contato" },
@@ -64,10 +65,11 @@ export const pt: Copy = {
     },
     links: [
       { n: "01", label: "Quem sou", href: "#sobre" },
-      { n: "02", label: "Ver cases", href: "#exp", arrow: true },
-      { n: "03", label: "Como uso IA", href: "#ia" },
-      { n: "04", label: "O que faço", href: "#comp" },
-      { n: "05", label: "Contato", href: "#contato", arrow: true },
+      { n: "02", label: "Trajetória", href: "#exp" },
+      { n: "03", label: "Projetos", href: "#projetos", arrow: true },
+      { n: "04", label: "Como uso IA", href: "#ia" },
+      { n: "05", label: "O que faço", href: "#comp" },
+      { n: "06", label: "Contato", href: "#contato", arrow: true },
     ],
   },
 
@@ -144,6 +146,38 @@ export const pt: Copy = {
         desc: "Em consultoria para pequenas e médias empresas, mapeei a jornada dos clientes e propus melhorias de usabilidade em produtos digitais. Foi ali que percebi que o problema quase nunca está só na tela.",
         tags: ["descoberta", "prototipação", "handoff", "acessibilidade"],
         learn: "Todo produto merece uma boa usabilidade e todo cliente uma boa experiência.",
+      },
+    ],
+  },
+
+  projects: {
+    kicker: "Projetos",
+    title: "Projetos no ar",
+    intro:
+      "Sites publicados que você pode abrir agora — feitos com a Avellen, a consultoria de design e tecnologia da qual faço parte.",
+    visit: "Visitar site",
+    roleLabel: "Meu papel",
+    items: [
+      {
+        id: "avellen",
+        type: "Site institucional",
+        desc: "Site da nossa consultoria de design e tecnologia. Organizei a apresentação dos serviços, os planos de site (Essencial, Profissional e Business), os projetos e as perguntas frequentes para levar a pessoa até o contato sem rodeio.",
+        role: "UX/UI design",
+        tags: ["arquitetura da informação", "planos", "conversão"],
+      },
+      {
+        id: "castherm",
+        type: "Catálogo B2B · cliente",
+        desc: "Site de uma revenda de instrumentos de medição (Kestrel, Fluke, Dwyer). Catálogo navegável por categoria e por setor, destaques de produtos e pedido de orçamento rápido pelo WhatsApp.",
+        role: "UX/UI design",
+        tags: ["catálogo", "orçamento via WhatsApp", "B2B"],
+      },
+      {
+        id: "cezar",
+        type: "Portfólio",
+        desc: "Portfólio de um engenheiro de software focado em frontend, cloud e IA. Visual escuro e “cyber maximalista”, pensado para apresentar projetos técnicos com personalidade.",
+        role: "UX/UI design",
+        tags: ["portfólio", "dark mode", "direção visual"],
       },
     ],
   },
@@ -269,7 +303,7 @@ export const pt: Copy = {
     linkedinCta: "Conectar no LinkedIn ↗",
     form: {
       title: "Linha aberta ★",
-      code: "form. 05",
+      code: "form. 06",
       name: "Nome",
       email: "E-mail",
       phone: "Celular (opcional)",

@@ -15,7 +15,7 @@ const STEP_THEMES = [
 const tape = "absolute h-5 w-[78px] border border-navy/35 bg-cream/[.85]";
 
 /**
- * 03. IA no processo — o único lugar do site que explica como a Ana usa IA:
+ * 04. IA no processo — o único lugar do site que explica como a Ana usa IA:
  * princípio, onde usa / não usa e um caso real em formato de janela retrô.
  */
 export function AiSection() {
@@ -33,7 +33,7 @@ export function AiSection() {
         backgroundSize: "24px 24px",
       }}
     >
-      <SectionKicker number="03" label={a.kicker} className="mb-[clamp(20px,2.6vw,32px)]" />
+      <SectionKicker number="04" label={a.kicker} className="mb-[clamp(20px,2.6vw,32px)]" />
 
       <div className="grid items-start gap-[clamp(24px,3.4vw,48px)] lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         {/* ---------- princípio + onde uso / não uso ---------- */}

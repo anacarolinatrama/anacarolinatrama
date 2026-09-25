@@ -5,6 +5,7 @@ import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/hero/Hero";
+import { Projects } from "@/components/Projects";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { Ribbon } from "@/components/Ribbon";
 import { Skills } from "@/components/Skills";
@@ -19,6 +20,7 @@ export default function Home() {
           <Ribbon />
           <About />
           <Experience />
+          <Projects />
           <AiSection />
           <Skills />
           <Contact />

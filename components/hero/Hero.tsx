@@ -71,7 +71,7 @@ export function Hero() {
 
               <div className="flex flex-wrap items-center gap-3">
                 <a
-                  href="#exp"
+                  href="#projetos"
                   className="inline-flex items-center gap-2 rounded-[6px] border-2 border-navy bg-gold px-[14px] py-[9px] font-display text-[12px] uppercase tracking-[.1em] text-navy no-underline shadow-[4px_4px_0_#12224C] transition-colors hover:bg-red hover:text-cream max-md:min-h-[44px]"
                 >
                   {h.cta} <span className="font-mono text-[13px]">→</span>
