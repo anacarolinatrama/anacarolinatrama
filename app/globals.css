@@ -90,3 +90,20 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---------- impressão / PDF do currículo (/cv) ---------- */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+  html,
+  body {
+    background: #fff;
+  }
+  .cv-sheet,
+  .cv-sheet * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

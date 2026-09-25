@@ -32,6 +32,8 @@ export type Copy = {
     intro: string;
     marquee: string;
     cta: string;
+    /** Link para a página /cv */
+    cvCta: string;
     nowLabel: string;
     now: string[];
     /** Prova rápida: empresas/projetos por onde a Ana passou */
@@ -65,6 +67,8 @@ export type Copy = {
     kicker: string;
     title: string;
     items: Experience[];
+    /** Título do bloco de formação (os cursos ficam em content/cv.ts → education) */
+    educationTitle: string;
   };
   /** 03. IA no processo — único lugar do site que explica o uso de IA */
   ai: {

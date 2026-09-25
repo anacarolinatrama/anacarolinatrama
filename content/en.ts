@@ -30,6 +30,7 @@ export const en: Copy = {
     marquee:
       "✦ Product Design — UX Strategy — AI + Design — Research — Accessibility — Complex Systems — ✦",
     cta: "Explore my work",
+    cvCta: "View résumé",
     nowLabel: "Currently",
     now: ["Banco do Brasil, via Cast group", "São Paulo, Brazil"],
     clientsLabel: "I've designed for",
@@ -96,6 +97,7 @@ export const en: Copy = {
   exp: {
     kicker: "Experience",
     title: "Where the work happened",
+    educationTitle: "Education",
     items: [
       {
         role: "UX/UI & Product Designer",
